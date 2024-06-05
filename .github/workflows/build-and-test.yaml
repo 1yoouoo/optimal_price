@@ -67,3 +67,38 @@ jobs:
             pm2 restart nextjs || pm2 start npm --name "nextjs" -- start
           EOF
 
+      - name: Notify Slack on Success
+        if: success()
+        uses: slackapi/slack-github-action@v1.20.0
+        with:
+          payload: |
+            {
+              "channel": "#your-channel",
+              "attachments": [
+                {
+                  "color": "good",
+                  "pretext": "Build and Deployment Status",
+                  "text": "The build and deployment of the project was successful."
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify Slack on Failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1.20.0
+        with:
+          payload: |
+            {
+              "channel": "#your-channel",
+              "attachments": [
+                {
+                  "color": "danger",
+                  "pretext": "Build and Deployment Status",
+                  "text": "The build and deployment of the project failed."
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
