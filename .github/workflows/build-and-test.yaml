@@ -1,4 +1,4 @@
-name: build and test codebase
+name: build, test, and deploy codebase
 
 on:
   pull_request:
@@ -46,3 +46,22 @@ jobs:
 
       - name: Test
         run: npm test
+
+      - name: Archive production artifacts
+        run: tar -czf nextjs-build.tar.gz .next
+
+      - name: Deploy to DigitalOcean Droplet
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          DROPLET_IP: ${{ secrets.DROPLET_IP }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          scp -o StrictHostKeyChecking=no nextjs-build.tar.gz root@$DROPLET_IP:/root/
+          ssh -o StrictHostKeyChecking=no root@$DROPLET_IP << 'EOF'
+            tar -xzf /root/nextjs-build.tar.gz -C /var/www/nextjs
+            cd /var/www/nextjs
+            npm install --production
+            pm2 start npm --name "nextjs" -- start
+          EOF
