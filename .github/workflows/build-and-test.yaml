@@ -48,7 +48,7 @@ jobs:
         run: npm test
 
       - name: Archive production artifacts
-        run: tar -czf nextjs-build.tar.gz .next
+        run: tar -czf nextjs-build.tar.gz .next package.json package-lock.json
 
       - name: Deploy to DigitalOcean Droplet
         env:
@@ -60,8 +60,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           scp -o StrictHostKeyChecking=no nextjs-build.tar.gz root@$DROPLET_IP:/root/
           ssh -o StrictHostKeyChecking=no root@$DROPLET_IP << 'EOF'
+            mkdir -p /var/www/nextjs
             tar -xzf /root/nextjs-build.tar.gz -C /var/www/nextjs
             cd /var/www/nextjs
             npm install --production
-            pm2 start npm --name "nextjs" -- start
+            pm2 restart nextjs || pm2 start npm --name "nextjs" -- start
           EOF
+
