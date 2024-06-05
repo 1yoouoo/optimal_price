@@ -78,7 +78,7 @@ jobs:
               "attachments": [
                 {
                   "color": "#36a64f",
-                  "title": "${{ github.repository }}",
+                  "title": "${{ github.repository }} 배포 성공 ✅",
                   "title_link": "https://github.com/${{github.repository}}",
                   "text": "GitHub Action 성공 ✅",
                   "fields": [
@@ -111,7 +111,7 @@ jobs:
               "attachments": [
                 {
                   "color": "#ff0000",
-                  "title": "${{ github.repository }}",
+                  "title": "${{ github.repository }} 배포 실패 ❌",
                   "title_link": "https://github.com/${{github.repository}}",
                   "text": "GitHub Action 실패 ❌",
                   "fields": [
