@@ -6,18 +6,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.optimalprice.kr',
         port: '',
-        pathname: '/cat01.webp',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.optimalprice.kr',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'optimalprice.kr',
-        port: '',
         pathname: '/**',
       },
     ],

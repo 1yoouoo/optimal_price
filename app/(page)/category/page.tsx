@@ -9,7 +9,6 @@ export default function Category() {
         width={1280}
         height={660}
         objectFit="cover"
-        //   className="max-h-[660px] rounded-3xl"
       />
     </main>
   )
