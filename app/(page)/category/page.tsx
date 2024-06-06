@@ -10,7 +10,6 @@ export default function Category() {
         height={660}
         objectFit="cover"
       />
-      test
     </main>
   )
 }
