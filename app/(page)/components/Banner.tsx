@@ -28,8 +28,8 @@ const Banner = () => {
               alt={`Slide ${index + 1}`}
               width={1280}
               height={660}
-              objectFit="obtain"
-              className="max-h-[660px] rounded-3xl"
+              objectFit="cover"
+              //   className="max-h-[660px] rounded-3xl"
             />
           </div>
         </SwiperSlide>
