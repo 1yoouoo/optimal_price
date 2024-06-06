@@ -48,7 +48,7 @@ jobs:
         run: npm test
 
       - name: Archive production artifacts
-        run: tar -czf nextjs-build.tar.gz .next package.json package-lock.json
+        run: tar -czf nextjs-build.tar.gz .next package.json package-lock.json next.config.js
 
       - name: Deploy to DigitalOcean Droplet
         env:
@@ -64,7 +64,7 @@ jobs:
             tar -xzf /root/nextjs-build.tar.gz -C /var/www/nextjs
             cd /var/www/nextjs
             npm install --production
-            pm2 restart nextjs || pm2 start npm --name "nextjs" -- start -- -p 80
+            pm2 restart nextjs || pm2 start npm --name "nextjs" -- start
           EOF
 
       - name: Notify Slack on Success
