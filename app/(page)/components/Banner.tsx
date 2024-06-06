@@ -30,6 +30,7 @@ const Banner = () => {
               height={660}
               objectFit="cover"
               //   className="max-h-[660px] rounded-3xl"
+              unoptimized
             />
           </div>
         </SwiperSlide>
