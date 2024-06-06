@@ -64,7 +64,7 @@ jobs:
             tar -xzf /root/nextjs-build.tar.gz -C /var/www/nextjs
             cd /var/www/nextjs
             npm install --production
-            pm2 restart nextjs || pm2 start npm --name "nextjs" -- start
+            pm2 restart nextjs || pm2 start npm --name "nextjs" -- start -- -p 80
           EOF
 
       - name: Notify Slack on Success
