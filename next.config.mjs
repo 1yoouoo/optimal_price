@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['optimalprice.kr', 'cdn.optimalprice.kr'],
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.optimalprice.kr',
+        port: '',
+        pathname: '/cat01.webp',
+      },
       {
         protocol: 'https',
         hostname: 'cdn.optimalprice.kr',
