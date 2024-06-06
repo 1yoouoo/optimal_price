@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['optimalprice.kr'],
+    domains: ['optimalprice.kr', 'cdn.optimalprice.kr'],
     remotePatterns: [
       {
         protocol: 'https',
