@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import ChevronLeftIcon from '@/app/assets/btn_arrow_left.svg'
+import QuickUpIcon from '@/app/assets/btn_quick_up.svg'
 import Image from 'next/image'
 
 const ScrollToTopButton = () => {
@@ -32,11 +32,11 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
     >
       <Image
-        src={ChevronLeftIcon}
+        src={QuickUpIcon}
         alt="Chevron Right Icon"
         width={60}
         height={60}
-        className="z-10 rotate-90 cursor-pointer rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
+        className="z-10 cursor-pointer rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
       />
     </button>
   )
