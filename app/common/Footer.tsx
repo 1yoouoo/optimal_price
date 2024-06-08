@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className="relative flex h-80 flex-col border-t border-gray-300 px-20 py-12">
       <div className="flex">
-        <div className="h-48 w-3/4 border-r border-gray-200">
+        <div className="h-48 w-10/12 border-r border-gray-200">
           <p>
             이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일액의 수수료
             제공받습니다.
@@ -24,8 +24,8 @@ const Footer = () => {
             최적가는 상품, 거래정보 및 거래에 대해 책임을 지지 않습니다.
           </p>
         </div>
-        <div className="w-1/4 px-12">
-          <p>개발자</p>
+        <div className="w-2/12 px-12">
+          <p>asdasdasd</p>
         </div>
       </div>
       <p className="absolute bottom-0 mb-4 mt-4 w-full text-center text-gray-500">
