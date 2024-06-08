@@ -3,6 +3,7 @@
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
+import 'swiper/css/navigation'
 
 const Banner = () => {
   const images = Array.from(
@@ -11,35 +12,34 @@ const Banner = () => {
   )
 
   return (
-    <div className="absolute left-0 w-screen bg-gray-400">
-      {/* 부모 요소의 마진을 제거하고 전체 너비 사용 */}
+    <ul className="absolute left-0">
       <Swiper
         spaceBetween={50}
-        slidesPerView={1.2} // 슬라이드가 1.5개 보이도록 설정
+        slidesPerView="auto"
         centeredSlides={true} // 슬라이드를 가운데 정렬
         slidesOffsetAfter={0}
         slidesOffsetBefore={0}
         navigation
+        loop={true} // 슬라이드가 무한히 돌아가도록 설정
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        className="swiper-container h-full w-full bg-gray-400"
       >
         {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <div className="mx-auto h-[660px] w-[1280px]">
-              {/* overflow-hidden 추가 */}
+          <SwiperSlide key={index} style={{ width: 'auto' }}>
+            <li className="h-[660px]">
               <Image
                 src={src}
                 alt={`Slide ${index + 1}`}
                 width={1280}
                 height={660}
                 objectFit="cover"
-                className="rounded-3xl"
+                className="h-full w-full rounded-[48px]"
               />
-            </div>
+            </li>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </ul>
   )
 }
 
