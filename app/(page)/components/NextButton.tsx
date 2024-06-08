@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import ChevronRightIcon from '@/app/assets/btn_arrow_right.svg'
+import ChevronRightIcon from '@/app/assets/button/btn_arrow_right.svg'
 import Image from 'next/image'
 
 interface NextButtonProps {
@@ -18,7 +18,7 @@ const NextButton = ({ setNextEl }: NextButtonProps) => {
 
   return (
     <span
-      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 flex items-center justify-center bg-gray-100`}
+      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 flex items-center justify-center`}
     >
       <Image
         ref={nextRef}

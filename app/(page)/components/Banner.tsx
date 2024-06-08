@@ -44,14 +44,14 @@ const Banner = () => {
   return (
     <>
       <ul
-        className={`absolute left-0 right-0 transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'} mt-12`}
+        className={`absolute left-0 right-0 transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
       >
         <div className="relative">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={50}
             slidesPerView="auto"
-            centeredSlides={true}
+            centeredSlides
             slidesOffsetAfter={0}
             slidesOffsetBefore={0}
             navigation={{
@@ -72,7 +72,7 @@ const Banner = () => {
             loop={true}
             className="relative h-full w-full"
             autoplay={{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
           >
@@ -101,7 +101,7 @@ const Banner = () => {
           </Swiper>
         </div>
       </ul>
-      <div className="h-[var(--banner-height)]" />
+      <div className="my-12 h-[var(--banner-height)]" />
     </>
   )
 }

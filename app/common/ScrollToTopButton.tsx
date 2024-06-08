@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import QuickUpIcon from '@/app/assets/btn_quick_up.svg'
+import QuickUpIcon from '@/app/assets/button/btn_quick_up.svg'
 import Image from 'next/image'
 
 const ScrollToTopButton = () => {
