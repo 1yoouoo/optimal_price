@@ -12,7 +12,7 @@ const PlayButton = ({
   return (
     <button
       onClick={handleClickToggle}
-      className={`absolute left-[var(--banner-width)] right-0 top-10 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-gray-300 bg-gray-100`}
+      className={`absolute bottom-[var(--banner-height)] left-[var(--banner-width)] right-0 top-0 z-10 m-auto flex h-7 w-7 -translate-x-16 translate-y-16 items-center justify-center rounded-full border border-gray-300 bg-gray-100 opacity-50 hover:opacity-100`}
     >
       {isPlaying ? (
         <Image

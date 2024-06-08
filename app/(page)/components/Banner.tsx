@@ -44,7 +44,7 @@ const Banner = () => {
   return (
     <>
       <ul
-        className={`absolute left-0 right-0 transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute left-0 right-0 transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'} mt-12`}
       >
         <div className="relative">
           <Swiper
