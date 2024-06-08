@@ -7,20 +7,34 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { useState, useEffect } from 'react'
-import NextButton from '../svg/NextButton'
-import PrevButton from '../svg/PrevButton'
+import NextButton from './NextButton'
+import PrevButton from './PrevButton'
+import PlayButton from './PlayButton'
 
 const Banner = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
   const [swiperReady, setSwiperReady] = useState(false)
   const [fadeIn, setFadeIn] = useState(false)
+  const [swiperInstance, setSwiperInstance] = useState<any>(null)
+
+  const [isPlaying, setIsPlaying] = useState(true)
+
+  const handleClickToggle = () => {
+    setIsPlaying(!isPlaying)
+    if (isPlaying) {
+      swiperInstance.autoplay.stop()
+    } else {
+      swiperInstance.autoplay.start()
+    }
+  }
 
   useEffect(() => {
-    if (swiperReady) {
+    if (swiperReady && swiperInstance) {
+      swiperInstance.autoplay.start()
       setFadeIn(true)
     }
-  }, [swiperReady])
+  }, [swiperReady, swiperInstance])
 
   const images = Array.from(
     { length: 8 },
@@ -44,7 +58,10 @@ const Banner = () => {
               prevEl,
               nextEl,
             }}
-            onInit={() => setSwiperReady(true)}
+            onInit={(swiper) => {
+              setSwiperReady(true)
+              setSwiperInstance(swiper)
+            }}
             pagination={{
               clickable: true,
               bulletClass: 'swiper-pagination-bullet',
@@ -53,7 +70,6 @@ const Banner = () => {
                 `<span class="${className}"></span>`,
             }}
             loop={true}
-            onSwiper={(swiper) => console.log(swiper)}
             className="relative h-full w-full"
             autoplay={{
               delay: 3000,
@@ -69,14 +85,19 @@ const Banner = () => {
                       alt={`Slide ${index + 1}`}
                       width={1280}
                       height={660}
-                      objectFit="cover"
                       className="h-full w-full rounded-[48px] shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
                     />
                   </li>
                 </SwiperSlide>
               ))}
+
             <NextButton setNextEl={setNextEl} />
             <PrevButton setPrevEl={setPrevEl} />
+
+            <PlayButton
+              isPlaying={isPlaying}
+              handleClickToggle={handleClickToggle}
+            />
           </Swiper>
         </div>
       </ul>

@@ -1,12 +1,16 @@
 'use client'
 
-import SearchIcon from '@/app/assets/searchIcon.svg'
+import SearchIcon from '@/app/assets/search.svg'
 import Image from 'next/image'
 
 const SearchBar = () => {
   return (
-    <div className="w-80 h-11 relative flex items-center rounded-full px-4 py-2 bg-[#f5f5f5]">
-      <input type="text" placeholder='Search...' className='placeholder:text-s bg-transparent placeholder:text-gray-500 decoration-none outline-none mx-3'/>
+    <div className="relative flex h-11 w-80 items-center rounded-full bg-[#f5f5f5] px-4 py-2">
+      <input
+        type="text"
+        placeholder="Search..."
+        className="placeholder:text-s decoration-none mx-3 bg-transparent outline-none placeholder:text-gray-500"
+      />
       <Image
         className="absolute right-4"
         src={SearchIcon}
