@@ -4,8 +4,17 @@ import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
 import 'swiper/css/navigation'
+import { Navigation } from 'swiper/modules'
+import { useRef, useState } from 'react'
+// use the `useState` hook instead of `useRef`
+// <Swiper navigation={{ prevEl, nextEl }}>
+// // some slides
+// </Swiper>
 
 const Banner = () => {
+  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
+  const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
+
   const images = Array.from(
     { length: 8 },
     (_, i) => `https://cdn.optimalprice.kr/cat0${i + 1}.webp`
@@ -14,19 +23,23 @@ const Banner = () => {
   return (
     <ul className="absolute left-0">
       <Swiper
+        modules={[Navigation]}
         spaceBetween={50}
         slidesPerView="auto"
-        centeredSlides={true} // 슬라이드를 가운데 정렬
+        centeredSlides={true}
         slidesOffsetAfter={0}
         slidesOffsetBefore={0}
-        navigation
-        loop={true} // 슬라이드가 무한히 돌아가도록 설정
+        navigation={{
+          prevEl,
+          nextEl,
+        }}
+        loop={true}
         onSwiper={(swiper) => console.log(swiper)}
-        className="swiper-container h-full w-full bg-gray-400"
+        className="relative h-full w-full"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index} style={{ width: 'auto' }}>
-            <li className="h-[660px]">
+            <li className="group relative h-[660px]">
               <Image
                 src={src}
                 alt={`Slide ${index + 1}`}
@@ -38,6 +51,8 @@ const Banner = () => {
             </li>
           </SwiperSlide>
         ))}
+        <div ref={(node) => setPrevEl(node)}>prev</div>
+        <div ref={(node) => setNextEl(node)}>next</div>
       </Swiper>
     </ul>
   )
