@@ -1,10 +1,10 @@
 {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "warnOnUnusedVariables": true,
-    "warnOnUnusedImports": true,
-    "plugins": ["prettier-plugin-tailwindcss"],
-    "tailwindConfig": "./tailwind.config.ts"
-  }
-  
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "es5",
+  "warnOnUnusedVariables": true,
+  "warnOnUnusedImports": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindConfig": "./tailwind.config.ts",
+  "printWidth": 80
+}

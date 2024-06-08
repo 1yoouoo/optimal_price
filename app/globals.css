@@ -4,10 +4,26 @@
 
 :root {
   --primary-color: rgb(81, 197, 104);
+  --banner-height: 600px;
+  --banner-width: 1280px;
 }
 
 body {
 }
 
 @layer utilities {
+}
+
+@layer components {
+  .swiper-pagination-bullet {
+    @apply -translate-y-2.5;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
 }
