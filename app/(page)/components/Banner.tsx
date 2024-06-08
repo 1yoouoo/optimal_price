@@ -80,7 +80,7 @@ const Banner = () => {
           </Swiper>
         </div>
       </ul>
-      <div className="h-[660px]" />
+      <div className="h-[var(--banner-height)]" />
     </>
   )
 }
