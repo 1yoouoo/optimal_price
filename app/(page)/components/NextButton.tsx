@@ -18,7 +18,7 @@ const NextButton = ({ setNextEl }: NextButtonProps) => {
 
   return (
     <span
-      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 z-10 flex items-center justify-center`}
+      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 flex items-center justify-center bg-gray-100`}
     >
       <Image
         ref={nextRef}
@@ -26,7 +26,7 @@ const NextButton = ({ setNextEl }: NextButtonProps) => {
         alt="Chevron Right Icon"
         width={60}
         height={60}
-        className="cursor-pointer rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
+        className="z-10 cursor-pointer rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
       />
     </span>
   )
