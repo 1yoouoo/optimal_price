@@ -2,12 +2,14 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import ChevronLeftSVG from '@/app/assets/button/btn_arrow_left.svg'
 
-interface PrevButtonIconProps {
+interface PrevButtonIconForBannnerProps {
   // eslint-disable-next-line no-unused-vars
   setPrevEl: (el: HTMLDivElement) => void
 }
 
-const PrevButtonIcon = ({ setPrevEl }: PrevButtonIconProps) => {
+const PrevButtonIconForBannner = ({
+  setPrevEl,
+}: PrevButtonIconForBannnerProps) => {
   const nextRef = useRef(null)
 
   useEffect(() => {
@@ -32,4 +34,4 @@ const PrevButtonIcon = ({ setPrevEl }: PrevButtonIconProps) => {
   )
 }
 
-export default PrevButtonIcon
+export default PrevButtonIconForBannner

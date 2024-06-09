@@ -2,12 +2,14 @@ import { useEffect, useRef } from 'react'
 import ChevronRightSVG from '@/app/assets/button/btn_arrow_right.svg'
 import Image from 'next/image'
 
-interface NextButtonIconProps {
+interface NextButtonIconForFeaturedProductsProps {
   // eslint-disable-next-line no-unused-vars
   setNextEl: (el: HTMLDivElement) => void
 }
 
-const NextButtonIcon = ({ setNextEl }: NextButtonIconProps) => {
+const NextButtonIconForFeaturedProducts = ({
+  setNextEl,
+}: NextButtonIconForFeaturedProductsProps) => {
   const nextRef = useRef(null)
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const NextButtonIcon = ({ setNextEl }: NextButtonIconProps) => {
 
   return (
     <span
-      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 flex items-center justify-center`}
+      className={`absolute bottom-0 left-20 top-12 flex items-center justify-center`}
     >
       <Image
         ref={nextRef}
@@ -32,4 +34,4 @@ const NextButtonIcon = ({ setNextEl }: NextButtonIconProps) => {
   )
 }
 
-export default NextButtonIcon
+export default NextButtonIconForFeaturedProducts
