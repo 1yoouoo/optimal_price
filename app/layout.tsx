@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import Header from './common/Header'
 import Footer from './common/Footer'
 import ScrollToTopButton from './common/ScrollToTopButton'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: '최적가 | 똑똑한 소비습관',

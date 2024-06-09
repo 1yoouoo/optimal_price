@@ -121,8 +121,9 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      <section className="relative h-auto w-full">
-        <ItemList />
+      <section className="relative flex h-auto w-full flex-col gap-20">
+        <ItemList title="베스트" endpoint="/best" rows={2} />
+        <ItemList title="할인율이 높은 상품" endpoint="/discount" rows={2} />
       </section>
     </main>
   )

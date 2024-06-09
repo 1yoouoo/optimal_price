@@ -1,4 +1,5 @@
 import ImageWithFallback from '@/app/common/ImageWithFallback'
+import { formatCurrency } from '@/utils/formatCurrency'
 import { Product } from '@/utils/mock'
 
 interface CompactItemProps {
@@ -20,8 +21,8 @@ const CompactItem = ({ item }: CompactItemProps) => {
       </span>
 
       <span className="mx-2 flex flex-col items-start">
-        <b>{item.name}</b>
-        <span>{item.price}</span>
+        <b className="line-clamp-2 w-full">{item.name}</b>
+        <span>{formatCurrency(item.price)}</span>
       </span>
     </span>
   )
