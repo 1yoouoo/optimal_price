@@ -5,7 +5,7 @@ import CategoryComponent from '../common/Category'
 import Banner from './components/Banner'
 import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
-import ItemListSwiper from './components/ItemListSwiper'
+import ItemList from './components/ItemList'
 
 const categories = [
   {
@@ -121,9 +121,9 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      <p className="relative h-auto w-full">
-        <ItemListSwiper />
-      </p>
+      <section className="relative h-auto w-full">
+        <ItemList />
+      </section>
     </main>
   )
 }
