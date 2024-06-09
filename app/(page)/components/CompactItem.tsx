@@ -19,8 +19,6 @@ const CompactItem = ({ item }: CompactItemProps) => {
     }
   }, [item.discountPercent])
 
-  console.log(isBadgeVisible)
-
   return (
     <span className="group relative flex items-center justify-center">
       <span className="relative flex flex-col transition-opacity duration-200 hover:opacity-100">

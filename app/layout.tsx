@@ -4,6 +4,7 @@ import './globals.css'
 import Header from './common/Header'
 import Footer from './common/Footer'
 import ScrollToTopButton from './common/ScrollToTopButton'
+import { ToastProvider } from './provider/ToastProvider'
 
 const inter = DM_Sans({ subsets: ['latin'] })
 
@@ -21,7 +22,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${inter.className} `}>
         <Header />
-        {children}
+        <ToastProvider>{children}</ToastProvider>
         <Footer />
         <ScrollToTopButton />
       </body>
