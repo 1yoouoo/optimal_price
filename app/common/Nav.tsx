@@ -9,7 +9,7 @@ const Nav = ({ href, children }: NavProps) => {
   return (
     <Link
       href={href}
-      className="text-m py-1 transition-colors duration-200 hover:text-[var(--primary-color)]"
+      className="text-m py-1 font-semibold transition-colors duration-200 hover:text-[var(--primary-color)]"
     >
       {children}
     </Link>

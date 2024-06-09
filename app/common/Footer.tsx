@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="relative flex h-80 flex-col border-t border-gray-300 px-20 py-12">
+    <div className="relative mt-40 flex h-80 flex-col border-t border-gray-300 px-20 py-12">
       <div className="flex">
         <div className="h-48 w-10/12 border-r border-gray-200">
           <p>

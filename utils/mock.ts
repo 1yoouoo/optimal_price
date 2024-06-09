@@ -1,19 +1,32 @@
 export type Product = {
   id: number
   name: string
-  price: number
+  originalPrice: number
+  previousPrice?: number
+  currentPrice: number
+  discountPercent: number
   image: string
   stars: number
   reviews: number
   isRocket: boolean
 }
 
+const calculateDiscountPercent = (
+  originalPrice: number,
+  currentPrice: number
+) => {
+  //FIXME: 정적인 할인 계산을 위해 임시 구현
+  return Math.round(((originalPrice - currentPrice) / originalPrice) * 100)
+}
+
 export const getAppleProducts = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: '애플 상품1',
-      price: 1000,
+      name: '할인율이 적으면 뱃지 안보임(20% 이하) 애플 상품1',
+      originalPrice: 4000,
+      currentPrice: 3800,
+      discountPercent: calculateDiscountPercent(4000, 3800),
       image: 'https://cdn.optimalprice.kr/01.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -22,7 +35,10 @@ export const getAppleProducts = () => {
     {
       id: 2,
       name: '애플 상품2',
-      price: 2000,
+      originalPrice: 2000,
+      previousPrice: 1000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(2000, 1000),
       image: 'https://cdn.optimalprice.kr/02.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -31,7 +47,9 @@ export const getAppleProducts = () => {
     {
       id: 3,
       name: '애플 상품3',
-      price: 3000,
+      originalPrice: 3000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(3000, 1000),
       image: 'https://cdn.optimalprice.kr/03.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -39,8 +57,11 @@ export const getAppleProducts = () => {
     },
     {
       id: 4,
-      name: '50% 이상 할인이 들어간 애플 상품4',
-      price: 4000,
+      name: '애플 상품4',
+      originalPrice: 4000,
+      previousPrice: 3000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(4000, 1000),
       image: 'https://cdn.optimalprice.kr/04.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -49,7 +70,10 @@ export const getAppleProducts = () => {
     {
       id: 5,
       name: '애플 상품5',
-      price: 5000,
+      originalPrice: 5000,
+      previousPrice: 4000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(5000, 1000),
       image: 'https://cdn.optimalprice.kr/05.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -58,7 +82,10 @@ export const getAppleProducts = () => {
     {
       id: 6,
       name: '비싼 애플 상품6',
-      price: 4900000,
+      originalPrice: 4900000,
+      previousPrice: 4900000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(4900000, 1000),
       image: 'https://cdn.optimalprice.kr/06.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -67,7 +94,10 @@ export const getAppleProducts = () => {
     {
       id: 7,
       name: '애플 상품7',
-      price: 7000,
+      originalPrice: 7000,
+      previousPrice: 7000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(7000, 1000),
       image: 'https://cdn.optimalprice.kr/07.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -76,7 +106,10 @@ export const getAppleProducts = () => {
     {
       id: 8,
       name: '긴이름의 애플 상품8 긴이름의 애플 상품8 긴이름의 애플 상품8 긴이름의 애플 상품8 긴이름의 애플 상품8',
-      price: 8000,
+      originalPrice: 8000,
+      previousPrice: 8000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(8000, 1000),
       image: 'https://cdn.optimalprice.kr/08.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -84,8 +117,11 @@ export const getAppleProducts = () => {
     },
     {
       id: 9,
-      name: '애플 상품9',
-      price: 9000,
+      name: '전 가격보다 현 가격이 더 오른 애플 상품9 **전 가격은 안보여줌**',
+      originalPrice: 9000,
+      previousPrice: 4000,
+      currentPrice: 5000,
+      discountPercent: calculateDiscountPercent(9000, 5000),
       image: 'https://cdn.optimalprice.kr/09.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -93,8 +129,11 @@ export const getAppleProducts = () => {
     },
     {
       id: 10,
-      name: '배경있는 상품1',
-      price: 10000,
+      name: '원래 가격과 전 가격이 동일하면 **전 가격은 안보여줌**',
+      originalPrice: 10000,
+      previousPrice: 10000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(10000, 1000),
       image: 'https://cdn.optimalprice.kr/10.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -103,7 +142,9 @@ export const getAppleProducts = () => {
     {
       id: 11,
       name: '배경있는 상품2',
-      price: 11000,
+      originalPrice: 11000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(11000, 1000),
       image: 'https://cdn.optimalprice.kr/11.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -112,7 +153,10 @@ export const getAppleProducts = () => {
     {
       id: 12,
       name: '일반 상품1',
-      price: 12000,
+      originalPrice: 12000,
+      previousPrice: 12000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(12000, 1000),
       image: 'https://cdn.optimalprice.kr/12.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -121,7 +165,10 @@ export const getAppleProducts = () => {
     {
       id: 13,
       name: '일반 상품2',
-      price: 13000,
+      originalPrice: 13000,
+      previousPrice: 13000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(13000, 1000),
       image: 'https://cdn.optimalprice.kr/13.png',
       stars: 4.5,
       reviews: 100,
@@ -130,7 +177,9 @@ export const getAppleProducts = () => {
     {
       id: 14,
       name: '배경있는 상품3',
-      price: 14000,
+      originalPrice: 14000,
+      currentPrice: 1000,
+      discountPercent: calculateDiscountPercent(14000, 1000),
       image: 'https://cdn.optimalprice.kr/14.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -138,8 +187,10 @@ export const getAppleProducts = () => {
     },
     {
       id: 15,
-      name: '배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4',
-      price: 15000,
+      name: '배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4 배경있는 긴 이름의 상품4',
+      originalPrice: 15000,
+      currentPrice: 11000,
+      discountPercent: calculateDiscountPercent(15000, 11000),
       image: 'https://cdn.optimalprice.kr/15.png',
       stars: 4.5,
       reviews: 100,
@@ -148,7 +199,10 @@ export const getAppleProducts = () => {
     {
       id: 16,
       name: '배경있는 상품5',
-      price: 16000,
+      originalPrice: 16000,
+      previousPrice: 13000,
+      currentPrice: 12500,
+      discountPercent: calculateDiscountPercent(16000, 12500),
       image: 'https://cdn.optimalprice.kr/16.jpeg',
       stars: 4.5,
       reviews: 100,
@@ -157,7 +211,9 @@ export const getAppleProducts = () => {
     {
       id: 17,
       name: '잘못된 라우트 상품1',
-      price: 17000,
+      originalPrice: 17000,
+      currentPrice: 13500,
+      discountPercent: calculateDiscountPercent(17000, 13500),
       image: 'https://cdn.optimalprice.kr/17.png',
       stars: 4.5,
       reviews: 100,
