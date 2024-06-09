@@ -12,14 +12,14 @@ const CopyIcon = () => {
       .then(() => {
         showToast({
           type: 'success',
-          message: '복사되었습니다!',
-        }) // 클릭 시 성공 토스트 메시지 표시
+          message: '클립보드에 복사되었습니다.',
+        })
       })
       .catch(() => {
         showToast({
           type: 'error',
           message: '복사에 실패했습니다.',
-        }) // 클릭 시 실패 토스트 메시지 표시
+        })
       })
   }
 
