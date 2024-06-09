@@ -10,10 +10,9 @@ interface ItemListProps {
   rows?: number
 }
 
-const cols = 5
-
 //TODO API 요청 시 limit있으면 효율적일 듯
 const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
+  const cols = 5
   const Items = getAppleProducts()
 
   console.log(endpoint)
