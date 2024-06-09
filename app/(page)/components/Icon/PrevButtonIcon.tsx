@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import ChevronLeftIcon from '@/app/assets/button/btn_arrow_left.svg'
+import ChevronLeftSVG from '@/app/assets/button/btn_arrow_left.svg'
 
-interface PrevButtonProps {
+interface PrevButtonIconProps {
   // eslint-disable-next-line no-unused-vars
   setPrevEl: (el: HTMLDivElement) => void
 }
 
-const PrevButton = ({ setPrevEl }: PrevButtonProps) => {
+const PrevButtonIcon = ({ setPrevEl }: PrevButtonIconProps) => {
   const nextRef = useRef(null)
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PrevButton = ({ setPrevEl }: PrevButtonProps) => {
     >
       <Image
         ref={nextRef}
-        src={ChevronLeftIcon}
+        src={ChevronLeftSVG}
         alt="Chevron Left Icon"
         width={60}
         height={60}
@@ -32,4 +32,4 @@ const PrevButton = ({ setPrevEl }: PrevButtonProps) => {
   )
 }
 
-export default PrevButton
+export default PrevButtonIcon

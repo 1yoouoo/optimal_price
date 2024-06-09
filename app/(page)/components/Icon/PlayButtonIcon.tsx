@@ -1,14 +1,16 @@
-import PlayIcon from '@/app/assets/play.svg'
-import PauseIcon from '@/app/assets/pause.svg'
+import PlaySVG from '@/app/assets/play.svg'
+import PauseSVG from '@/app/assets/pause.svg'
 import Image from 'next/image'
 
-const PlayButton = ({
-  isPlaying,
-  handleClickToggle,
-}: {
+interface PlayButtonIconProps {
   isPlaying: boolean
   handleClickToggle: () => void
-}) => {
+}
+
+const PlayButtonIcon = ({
+  isPlaying,
+  handleClickToggle,
+}: PlayButtonIconProps) => {
   return (
     <button
       onClick={handleClickToggle}
@@ -16,17 +18,17 @@ const PlayButton = ({
     >
       {isPlaying ? (
         <Image
-          src={PauseIcon}
+          src={PauseSVG}
           alt="pause"
           width={8}
           height={8}
           className="svg:fill-white"
         />
       ) : (
-        <Image src={PlayIcon} alt="play" width={8} height={8} />
+        <Image src={PlaySVG} alt="play" width={8} height={8} />
       )}
     </button>
   )
 }
 
-export default PlayButton
+export default PlayButtonIcon

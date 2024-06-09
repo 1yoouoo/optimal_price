@@ -7,9 +7,9 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { useState, useEffect } from 'react'
-import NextButton from './NextButton'
-import PrevButton from './PrevButton'
-import PlayButton from './PlayButton'
+import NextButtonIcon from './Icon/NextButtonIcon'
+import PrevButtonIcon from './Icon/PrevButtonIcon'
+import PlayButtonIcon from './Icon/PlayButtonIcon'
 
 const Banner = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
@@ -91,10 +91,10 @@ const Banner = () => {
                 </SwiperSlide>
               ))}
 
-            <NextButton setNextEl={setNextEl} />
-            <PrevButton setPrevEl={setPrevEl} />
+            <NextButtonIcon setNextEl={setNextEl} />
+            <PrevButtonIcon setPrevEl={setPrevEl} />
 
-            <PlayButton
+            <PlayButtonIcon
               isPlaying={isPlaying}
               handleClickToggle={handleClickToggle}
             />
