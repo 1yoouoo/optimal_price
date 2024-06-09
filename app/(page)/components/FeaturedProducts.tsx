@@ -24,7 +24,7 @@ const FeaturedProducts = () => {
       </div>
       <Image
         className="absolute left-0 -z-10 max-h-[450px] min-h-[300px] w-screen -translate-y-36"
-        src="https://cdn.optimalprice.kr/overlay03.webp"
+        src="https://cdn.optimalprice.kr/overlay04.webp"
         alt="text-overlay"
         quality={100}
         width={1920}
