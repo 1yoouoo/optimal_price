@@ -5,95 +5,96 @@ import CategoryComponent from '../common/Category'
 import Banner from './components/Banner'
 import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
+import ItemListSwiper from './components/ItemListSwiper'
 
 const categories = [
   {
     name: '가전/디지털',
     filePath: 'furniture',
-    routes: '/furniture',
+    routes: '/category/furniture',
   },
   {
     name: '생활용품',
     filePath: 'household_supplies',
-    routes: '/household-supplies',
+    routes: '/category/household-supplies',
   },
   {
     name: '완구/취미',
     filePath: 'hobby',
-    routes: '/hobby',
+    routes: '/category/hobby',
   },
   {
     name: '식품',
     filePath: 'organic_food',
-    routes: '/organic-food',
+    routes: '/category/organic-food',
   },
   {
     name: '헬스/건강식품',
     filePath: 'health',
-    routes: '/health',
+    routes: '/category/health',
   },
   {
     name: '여성패션',
     filePath: 'woman_fashion',
-    routes: '/woman-fashion',
+    routes: '/category/woman-fashion',
   },
   {
     name: '남성패션',
     filePath: 'man_fashion',
-    routes: '/man-fashion',
+    routes: '/category/man-fashion',
   },
   {
     name: '가구/홈인테리어',
     filePath: 'living_room',
-    routes: '/living-room',
+    routes: '/category/living-room',
   },
   {
     name: '문구/오피스',
     filePath: 'stationery',
-    routes: '/stationery',
+    routes: '/category/stationery',
   },
   {
     name: '뷰티',
     filePath: 'skin',
-    routes: '/skin',
+    routes: '/category/skin',
   },
   {
     name: '스포츠/레저',
     filePath: 'sports',
-    routes: '/sports',
+    routes: '/category/sports',
   },
   {
     name: '출산/유아동',
     filePath: 'infants',
-    routes: '/infants',
+    routes: '/category/infants',
   },
   {
     name: '주방용품',
     filePath: 'kitchen_utensil',
-    routes: '/kitchen-utensil',
+    routes: '/category/kitchen-utensil',
   },
   {
     name: '반려동물용품',
     filePath: 'pets',
-    routes: '/pets',
+    routes: '/category/pets',
   },
   {
     name: '자동차/오토바이',
     filePath: 'car',
-    routes: '/car',
+    routes: '/category/car',
   },
   {
     name: '신선식품',
     filePath: 'fresh_food',
-    routes: '/fresh-food',
+    routes: '/category/fresh-food',
   },
 ]
 
 export default function Home() {
   return (
-    <main className="px-20">
+    <main className="mx-auto w-[1280px]">
       <Banner />
-      <div className="relative h-[1000px] w-full">
+      <div className="relative h-60 w-full">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
@@ -105,7 +106,12 @@ export default function Home() {
           }}
         >
           {categories.map((category) => (
-            <SwiperSlide key={category.name} style={{ width: 'auto' }}>
+            <SwiperSlide
+              key={category.name}
+              style={{
+                width: 'auto',
+              }}
+            >
               <CategoryComponent
                 name={category.name}
                 path={category.filePath}
@@ -115,6 +121,9 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
+      <p className="relative h-auto w-full">
+        <ItemListSwiper />
+      </p>
     </main>
   )
 }
