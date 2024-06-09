@@ -14,11 +14,11 @@ const ExtendedItem = ({ item }: ExtendedItemProps) => {
       <span className="bg-red group relative flex items-center justify-center">
         <ProductWithImage item={item} />
       </span>
-      <span className="flex w-[400px] cursor-pointer flex-col items-start justify-between gap-1 px-4 py-16">
+      <span className="flex w-[400px] cursor-pointer flex-col items-start justify-between gap-1 py-16 pl-0 pr-2">
         <b className="line-clamp-2 w-full text-lg">{item.name}</b>
 
         <span className="flex w-full items-center justify-between gap-1">
-          <span className="flex items-center justify-between gap-3">
+          <span className="flex items-center justify-between gap-2">
             <span className="text-xl font-semibold text-red-500">
               {item.discountPercent}%
             </span>
