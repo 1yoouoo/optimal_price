@@ -12,7 +12,6 @@ interface ItemListProps {
 
 //TODO API 요청 시 limit있으면 효율적일 듯
 const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
-  const cols = 5
   const Items = getAppleProducts()
 
   console.log(endpoint)
@@ -31,7 +30,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
             </span>
           </Link>
         </div>
-        <div className={`grid grid-cols-${cols} gap-x-4 gap-y-12`}>
+        <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
           {Items.map((item) => (
             <CompactItem key={item.id} item={item} />
           ))}
@@ -39,7 +38,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
       </div>
     )
 
-  const slicedItems = Items.slice(0, rows * cols)
+  const slicedItems = Items.slice(0, rows * 5)
 
   return (
     <div className="flex flex-col gap-10">
@@ -53,7 +52,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
           </span>
         </Link>
       </div>
-      <div className={`grid grid-cols-${cols} gap-x-4 gap-y-12`}>
+      <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
         {slicedItems.map((item) => (
           <CompactItem key={item.id} item={item} />
         ))}
