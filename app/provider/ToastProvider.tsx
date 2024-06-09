@@ -29,7 +29,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       setFadeIn(false)
       setFadeOut(true)
-    }, 2000000) // 2초 후 페이드 아웃 시작
+    }, 2000) // 2초 후 페이드 아웃 시작
   }
 
   //TODO: 토스트를 queue로 관리해보자
