@@ -10,6 +10,7 @@ interface ToastMessage {
 }
 
 interface ToastContextType {
+  // eslint-disable-next-line no-unused-vars
   showToast: (toast: ToastMessage) => void
 }
 
@@ -33,6 +34,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     }, 2000) // 2초 후 페이드 아웃 시작
   }
 
+  //TODO: 토스트를 queue로 관리해보자
   useEffect(() => {
     if (fadeOut) {
       const timer = setTimeout(() => {
