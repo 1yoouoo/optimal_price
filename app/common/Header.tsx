@@ -6,6 +6,7 @@ import Nav from './Nav'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import debounce from 'lodash/debounce'
+import { categories } from '../(page)/components/CategoryList'
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
@@ -64,7 +65,15 @@ const Header = () => {
               <Nav href="/optimal-price">역대 최적가</Nav>
               <Nav href="/best">베스트</Nav>
               <Nav href="/new">신상품</Nav>
-              <Nav href="/category">카테고리</Nav>
+              <Nav
+                href="/category"
+                dropdown={categories.map((category) => ({
+                  href: category.filePath,
+                  label: category.name,
+                }))}
+              >
+                카테고리
+              </Nav>
             </nav>
 
             <div className="flex items-center justify-between">

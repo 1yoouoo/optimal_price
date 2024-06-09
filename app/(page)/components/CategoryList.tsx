@@ -4,7 +4,7 @@ import CategoryComponent from '@/app/common/Category'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const categories = [
+export const categories = [
   {
     name: '가전/디지털',
     filePath: 'furniture',
