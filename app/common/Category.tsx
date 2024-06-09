@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface CategoryComponentProps {
   name: string
@@ -13,9 +13,11 @@ interface CategoryComponentProps {
 const CategoryComponent = ({ name, path, routes }: CategoryComponentProps) => {
   const [CategoryIcon, setCategoryIcon] = useState(null)
 
-  import(`@/app/assets/categories/${path}.svg`)
-    .then((module) => setCategoryIcon(module.default))
-    .catch((err) => console.error(`Error loading SVG: ${err}`))
+  useEffect(() => {
+    import(`@/app/assets/categories/${path}.svg`)
+      .then((module) => setCategoryIcon(module.default))
+      .catch((err) => console.error(`Error loading SVG: ${err}`))
+  }, [path])
 
   if (!CategoryIcon) return null
 
