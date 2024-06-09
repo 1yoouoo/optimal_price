@@ -29,7 +29,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       setFadeIn(false)
       setFadeOut(true)
-    }, 2000) // 2초 후 페이드 아웃 시작
+    }, 2000000) // 2초 후 페이드 아웃 시작
   }
 
   //TODO: 토스트를 queue로 관리해보자
@@ -56,7 +56,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         }`}
       >
         <div
-          className="max-w-xs rounded-xl border border-gray-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+          className="max-w-xs rounded-xl border border-gray-200 bg-white shadow-lg"
           role="alert"
         >
           <div className="flex min-w-64 p-4">
@@ -101,9 +101,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               )}
             </div>
             <div className="ms-3">
-              <p className="text-sm text-gray-700 dark:text-neutral-400">
-                {toast?.message}
-              </p>
+              <p className="text-sm text-gray-700">{toast?.message}</p>
             </div>
           </div>
         </div>
