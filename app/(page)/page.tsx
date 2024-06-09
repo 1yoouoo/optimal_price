@@ -2,6 +2,7 @@ import Banner from './components/Banner'
 import 'swiper/css'
 import ItemList from './components/ItemList'
 import CategoryList from './components/CategoryList'
+import FeaturedProducts from './components/FeaturedProducts'
 
 export default function Home() {
   return (
@@ -9,9 +10,10 @@ export default function Home() {
       <Banner />
 
       <CategoryList />
-      <section className="relative flex h-auto w-full flex-col gap-20">
+      <section className="flex h-auto flex-col gap-20">
         <ItemList title="베스트" endpoint="/best" rows={2} />
         <ItemList title="할인율이 높은 상품" endpoint="/discount" rows={2} />
+        <FeaturedProducts />
       </section>
     </main>
   )

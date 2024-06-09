@@ -26,7 +26,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
           </Link>
           <Link href={endpoint}>
             <span className="flex h-10 cursor-pointer items-center justify-center">
-              더보기
+              더 보기
             </span>
           </Link>
         </div>
@@ -44,12 +44,10 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
     <div className="flex flex-col gap-10">
       <div className="flex justify-between">
         <Link href={endpoint}>
-          <h2 className="cursor-pointer text-3xl font-bold">{title}</h2>
+          <h2 className="text-3xl font-bold">{title}</h2>
         </Link>
         <Link href={endpoint}>
-          <span className="flex h-10 cursor-pointer items-center justify-center">
-            더보기
-          </span>
+          <span className="flex h-10 items-center justify-center">더 보기</span>
         </Link>
       </div>
       <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>

@@ -83,7 +83,7 @@ export const getAppleProducts = () => {
       id: 6,
       name: '비싼 애플 상품6',
       originalPrice: 4900000,
-      previousPrice: 4900000,
+      previousPrice: 4800000,
       currentPrice: 1000,
       discountPercent: calculateDiscountPercent(4900000, 1000),
       image: 'https://cdn.optimalprice.kr/06.jpeg',

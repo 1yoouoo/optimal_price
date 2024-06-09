@@ -27,7 +27,7 @@ const Nav = ({ href, children, dropdown }: NavProps) => {
       )}
 
       {dropdown && (
-        <div className="group relative [--trigger:hover]">
+        <div className="group relative">
           <span className="text-m cursor-pointer py-1 font-semibold transition-colors duration-200 hover:text-[var(--primary-color)]">
             {children}
           </span>

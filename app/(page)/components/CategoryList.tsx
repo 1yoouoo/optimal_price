@@ -89,7 +89,7 @@ export const categories = [
 
 const CategoryList = () => {
   return (
-    <nav className="relative my-40 w-full">
+    <nav className="relative mx-auto my-40 w-[1280px]">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
