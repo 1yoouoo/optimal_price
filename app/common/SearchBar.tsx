@@ -9,7 +9,7 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="placeholder:text-s decoration-none mx-3 bg-transparent outline-none placeholder:text-gray-500"
+        className="placeholder:text-s decoration-none mx-3 border-none bg-transparent outline-none placeholder:text-gray-500"
       />
       <Image
         className="absolute right-4"
