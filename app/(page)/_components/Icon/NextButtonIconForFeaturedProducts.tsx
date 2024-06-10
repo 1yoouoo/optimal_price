@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import ChevronRightSVG from '@/app/assets/button/btn_arrow_right.svg'
+import ChevronRightSVG from '@/public/button/btn_arrow_right.svg'
 import Image from 'next/image'
 
 interface NextButtonIconForFeaturedProductsProps {

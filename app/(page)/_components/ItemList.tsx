@@ -1,7 +1,7 @@
 'use client'
 
 import { getAppleProducts } from '@/utils/mock'
-import CompactItem from './CompactItem'
+import CompactCard from './CompactCard'
 import Link from 'next/link'
 
 interface ItemListProps {
@@ -32,7 +32,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
         </div>
         <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
           {Items.map((item) => (
-            <CompactItem key={item.id} item={item} />
+            <CompactCard key={item.id} item={item} />
           ))}
         </div>
       </div>
@@ -52,7 +52,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
       </div>
       <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
         {slicedItems.map((item) => (
-          <CompactItem key={item.id} item={item} />
+          <CompactCard key={item.id} item={item} />
         ))}
       </div>
     </div>

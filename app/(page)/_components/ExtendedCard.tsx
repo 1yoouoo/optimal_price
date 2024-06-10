@@ -6,11 +6,11 @@ import { formatCurrency } from '@/utils/formatCurrency'
 import { useEffect, useState } from 'react'
 import DiscountBadge from './DiscountBadge'
 
-interface ExtendedItemProps {
+interface ExtendedCardProps {
   item: Product
 }
 
-const ExtendedItem = ({ item }: ExtendedItemProps) => {
+const ExtendedCard = ({ item }: ExtendedCardProps) => {
   const [isBadgeVisible, setIsBadgeVisible] = useState(false)
 
   useEffect(() => {
@@ -59,4 +59,4 @@ const ExtendedItem = ({ item }: ExtendedItemProps) => {
   )
 }
 
-export default ExtendedItem
+export default ExtendedCard

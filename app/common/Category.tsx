@@ -14,7 +14,7 @@ const CategoryComponent = ({ name, path, routes }: CategoryComponentProps) => {
   const [CategoryIcon, setCategoryIcon] = useState(null)
 
   useEffect(() => {
-    import(`@/app/assets/categories/${path}.svg`)
+    import(`@/public/categories/${path}.svg`)
       .then((module) => setCategoryIcon(module.default))
       .catch((err) => console.error(`Error loading SVG: ${err}`))
   }, [path])

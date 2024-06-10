@@ -1,6 +1,6 @@
 'use client'
 
-import SearchIcon from '@/app/assets/search.svg'
+import SearchIcon from '@/public/search.svg'
 import Image from 'next/image'
 
 const SearchBar = () => {

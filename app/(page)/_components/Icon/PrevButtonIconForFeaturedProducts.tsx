@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import ChevronLeftSVG from '@/app/assets/button/btn_arrow_left.svg'
+import ChevronLeftSVG from '@/public/button/btn_arrow_left.svg'
 
-interface PrevButtonIconForBannnerProps {
+interface PrevButtonIconForFeaturedProductsProps {
   // eslint-disable-next-line no-unused-vars
   setPrevEl: (el: HTMLDivElement) => void
 }
 
-const PrevButtonIconForBannner = ({
+const PrevButtonIconForFeaturedProducts = ({
   setPrevEl,
-}: PrevButtonIconForBannnerProps) => {
+}: PrevButtonIconForFeaturedProductsProps) => {
   const nextRef = useRef(null)
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const PrevButtonIconForBannner = ({
 
   return (
     <span
-      className={`absolute bottom-0 left-0 right-[var(--banner-width)] top-0 flex items-center justify-center`}
+      className={`absolute bottom-0 left-0 top-12 flex items-center justify-center`}
     >
       <Image
         ref={nextRef}
@@ -34,4 +34,4 @@ const PrevButtonIconForBannner = ({
   )
 }
 
-export default PrevButtonIconForBannner
+export default PrevButtonIconForFeaturedProducts

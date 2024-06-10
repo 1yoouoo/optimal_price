@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react'
 import DiscountBadge from './DiscountBadge'
 import ProductWithImage from './ProductWithImage'
 
-interface CompactItemProps {
+interface CompactCardProps {
   item: Product
 }
 
-const CompactItem = ({ item }: CompactItemProps) => {
+const CompactCard = ({ item }: CompactCardProps) => {
   const [isBadgeVisible, setIsBadgeVisible] = useState(false)
 
   useEffect(() => {
@@ -57,4 +57,4 @@ const CompactItem = ({ item }: CompactItemProps) => {
   )
 }
 
-export default CompactItem
+export default CompactCard

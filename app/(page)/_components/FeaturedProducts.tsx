@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import ExtendedItem from './ExtendedItem'
+import ExtendedCard from './ExtendedCard'
 import { getAppleProducts } from '@/utils/mock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useState } from 'react'
@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
           >
             {Items.map((item) => (
               <SwiperSlide key={item.id} style={{ width: 'auto' }}>
-                <ExtendedItem item={item} />
+                <ExtendedCard item={item} />
               </SwiperSlide>
             ))}
           </Swiper>
