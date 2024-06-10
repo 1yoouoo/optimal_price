@@ -1,4 +1,4 @@
-import ItemList from '../../_components/ItemList'
+import ItemList from '../../components/ItemList'
 
 export default function Best() {
   return (

@@ -2,7 +2,7 @@
 
 import { Product } from '@/utils/mock'
 import ProductWithImage from './ProductWithImage'
-import { formatCurrency } from '@/utils/formatCurrency'
+import { formatCurrency } from '@/utils'
 import { useEffect, useState } from 'react'
 import DiscountBadge from './DiscountBadge'
 

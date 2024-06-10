@@ -2,6 +2,8 @@ import ImageWithFallback from '@/app/common/ImageWithFallback'
 import NewTabIcon from '../Icon/NewTabIcon'
 import CopyIcon from '../Icon/CopyIcon'
 import { Product } from '@/utils/mock'
+import { fallbackSrc } from '@/utils/contants'
+
 interface ProductWithImageProps {
   item: Product
 }
@@ -15,7 +17,7 @@ const ProductWithImage = ({ item }: ProductWithImageProps) => {
         width={220}
         height={220}
         className="px-4"
-        fallbackSrc="https://cdn.optimalprice.kr/image-loading-failed.png"
+        fallbackSrc={fallbackSrc}
       />
       <span className="absolute bottom-5 flex translate-y-full transform items-center justify-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
         <CopyIcon />

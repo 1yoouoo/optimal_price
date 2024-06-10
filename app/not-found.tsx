@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NotFound = () => {
   return (
     <section className="flex h-full items-center p-16">
