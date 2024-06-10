@@ -3,16 +3,30 @@
 import { Product } from '@/utils/mock'
 import ProductWithImage from './ProductWithImage'
 import { formatCurrency } from '@/utils/formatCurrency'
+import { useEffect, useState } from 'react'
+import DiscountBadge from './DiscountBadge'
 
 interface ExtendedItemProps {
   item: Product
 }
 
 const ExtendedItem = ({ item }: ExtendedItemProps) => {
+  const [isBadgeVisible, setIsBadgeVisible] = useState(false)
+
+  useEffect(() => {
+    if (item.discountPercent >= 20) {
+      setIsBadgeVisible(true)
+    }
+  }, [item.discountPercent])
+
   return (
     <div className="flex h-[300px] w-[620px] justify-between gap-6 rounded-xl bg-white p-4 shadow-lg">
-      <span className="bg-red group relative flex items-center justify-center">
+      <span className="group relative my-6 flex items-center justify-center">
         <ProductWithImage item={item} />
+
+        {isBadgeVisible && (
+          <DiscountBadge discountPercent={item.discountPercent} />
+        )}
       </span>
       <span className="flex w-[400px] cursor-pointer flex-col items-start justify-between gap-1 py-16 pl-0 pr-2">
         <b className="line-clamp-2 w-full text-lg">{item.name}</b>
