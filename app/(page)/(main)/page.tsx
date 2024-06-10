@@ -1,8 +1,8 @@
-import Banner from './_components/Banner'
+import Banner from '../../_components/Banner'
 import 'swiper/css'
-import ItemList from './_components/ItemList'
-import CategoryList from './_components/CategoryList'
-import FeaturedProducts from './_components/FeaturedProducts'
+import ItemList from '../../_components/ItemList'
+import CategoryList from '../../_components/CategoryList'
+import FeaturedProducts from '../../_components/FeaturedProducts'
 
 export default function Home() {
   return (

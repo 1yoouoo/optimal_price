@@ -6,8 +6,8 @@ import ExtendedCard from './ExtendedCard'
 import { getAppleProducts } from '@/utils/mock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useState } from 'react'
-import NextButtonIconForFeaturedProducts from './Icon/NextButtonIconForFeaturedProducts'
-import PrevButtonIconForFeaturedProducts from './Icon/PrevButtonIconForFeaturedProducts'
+import NextButtonIconForFeaturedProducts from '../Icon/NextButtonIconForFeaturedProducts'
+import PrevButtonIconForFeaturedProducts from '../Icon/PrevButtonIconForFeaturedProducts'
 import { Navigation } from 'swiper/modules'
 
 const FeaturedProducts = () => {

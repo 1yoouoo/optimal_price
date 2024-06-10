@@ -1,12 +1,7 @@
-import Link from 'next/link'
+import React from 'react'
 
-export default function NotFound() {
-  return (
-    <div>
-      <h2 className="py-14 text-4xl">Not Found</h2>
-      <Link href="/" className="text-xl">
-        Return <b className="text-[var(--primary-color)]">Home</b>
-      </Link>
-    </div>
-  )
+const NotFound = () => {
+  return <div>요청하신 페이지는 존재하지 않습니다.</div>
 }
+
+export default NotFound

@@ -1,6 +1,6 @@
 import ImageWithFallback from '@/app/common/ImageWithFallback'
-import NewTabIcon from './Icon/NewTabIcon'
-import CopyIcon from './Icon/CopyIcon'
+import NewTabIcon from '../Icon/NewTabIcon'
+import CopyIcon from '../Icon/CopyIcon'
 import { Product } from '@/utils/mock'
 interface ProductWithImageProps {
   item: Product
