@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import CopySVG from '@/public/item/copy.svg'
+import CopySVG from '@/public/svg/item/copy.svg'
 import { useToast } from '@/app/hooks/useToast'
 
 const CopyIcon = () => {

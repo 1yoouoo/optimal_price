@@ -1,5 +1,5 @@
-import PlaySVG from '@/public/play.svg'
-import PauseSVG from '@/public/pause.svg'
+import PlaySVG from '@/public/svg/play.svg'
+import PauseSVG from '@/public/svg/pause.svg'
 import Image from 'next/image'
 
 interface PlayButtonIconProps {

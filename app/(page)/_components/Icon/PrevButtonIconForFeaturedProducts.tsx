@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import ChevronLeftSVG from '@/public/button/btn_arrow_left.svg'
+import ChevronLeftSVG from '@/public/svg/button/btn_arrow_left.svg'
 
 interface PrevButtonIconForFeaturedProductsProps {
   // eslint-disable-next-line no-unused-vars

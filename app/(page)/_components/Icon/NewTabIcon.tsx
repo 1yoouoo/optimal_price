@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import NewTabSVG from '@/public/item/new_tab.svg'
+import NewTabSVG from '@/public/svg/item/new_tab.svg'
 
 const NewTabIcon = () => {
   return (
