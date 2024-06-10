@@ -7,9 +7,9 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { useState, useEffect } from 'react'
-import NextButtonIconForBannner from '../Icon/NextButtonIconForBanner'
-import PrevButtonIconForBannner from '../Icon/PrevButtonIconForBannner'
-import PlayButtonIcon from '../Icon/PlayButtonIcon'
+import NextButtonIconForBannner from '../../Icon/NextButtonIconForBanner'
+import PrevButtonIconForBannner from '../../Icon/PrevButtonIconForBannner'
+import PlayButtonIcon from '../../Icon/PlayButtonIcon'
 
 const Banner = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import Header from './common/Header'
-import Footer from './common/Footer'
-import ScrollToTopButton from './common/ScrollToTopButton'
+import Header from './components/common/Header'
+import Footer from './components/common/Footer'
+import ScrollToTopButton from './components/common/ScrollToTopButton'
 import { ToastProvider } from './provider/ToastProvider'
 
 const inter = DM_Sans({ subsets: ['latin'] })

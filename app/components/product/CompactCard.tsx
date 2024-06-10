@@ -1,7 +1,7 @@
 import { formatCurrency } from '@/utils'
 import { Product } from '@/utils/mock'
 import { useEffect, useState } from 'react'
-import DiscountBadge from './DiscountBadge'
+import DiscountBadge from '../badge/DiscountBadge'
 import ProductWithImage from './ProductWithImage'
 
 interface CompactCardProps {

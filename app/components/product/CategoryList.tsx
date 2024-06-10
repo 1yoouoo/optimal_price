@@ -1,6 +1,6 @@
 'use client'
 
-import CategoryComponent from '@/app/common/Category'
+import CategoryComponent from '@/app/components/common/Category'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
