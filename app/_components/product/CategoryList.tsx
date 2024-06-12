@@ -1,6 +1,6 @@
 'use client'
 
-import CategoryComponent from '@/app/components/common/Category'
+import CategoryComponent from '@/app/_components/common/Category'
 import { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'

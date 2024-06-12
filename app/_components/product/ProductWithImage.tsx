@@ -1,4 +1,4 @@
-import ImageWithFallback from '@/app/components/common/ImageWithFallback'
+import ImageWithFallback from '@/app/_components/common/ImageWithFallback'
 import NewTabIcon from '../../Icon/NewTabIcon'
 import CopyIcon from '../../Icon/CopyIcon'
 import { Product } from '@/utils/mock'

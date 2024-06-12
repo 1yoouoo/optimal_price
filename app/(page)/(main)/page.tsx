@@ -1,9 +1,9 @@
 // import Banner from '../../components/banner/Banner'
 import 'swiper/css'
-import ItemList from '../../components/product/ItemList'
-import CategoryList from '../../components/product/CategoryList'
-import FeaturedProducts from '../../components/product/FeaturedProducts'
-import SearchBar from '@/app/components/common/SearchBar'
+import ItemList from '../../_components/product/ItemList'
+import CategoryList from '../../_components/product/CategoryList'
+import FeaturedProducts from '../../_components/product/FeaturedProducts'
+import SearchBar from '@/app/_components/common/SearchBar'
 
 export default function Home() {
   return (
