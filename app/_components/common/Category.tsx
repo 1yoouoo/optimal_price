@@ -15,7 +15,7 @@ const CategoryComponent = ({ name, path, routes }: CategoryComponentProps) => {
       <li className="group inline-flex cursor-pointer flex-col items-center justify-center gap-y-2">
         <span className="flex h-24 w-24 items-center justify-center rounded-3xl bg-slate-200">
           <Image
-            src={`/svg/categories/${path}.svg`}
+            src={`/svg/categories/car.svg`}
             alt={name}
             width={58}
             height={58}
