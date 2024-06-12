@@ -1,6 +1,5 @@
 'use client'
 
-import SearchBar from './SearchBar'
 import Logo from './Logo'
 import Nav from './Nav'
 import Link from 'next/link'
@@ -41,17 +40,13 @@ const Header = () => {
                 <Nav href="/new">신상품</Nav>
                 <Nav href="/category">카테고리</Nav>
               </nav>
-
-              <div className="flex items-center justify-between">
-                <SearchBar />
-              </div>
             </div>
           </header>
           <div className="h-24" />
         </>
       ) : (
         <header
-          className={`z-50 mx-auto mb-2 flex h-48 w-screen flex-col items-center justify-between border-b border-gray-300 py-8`}
+          className={`z-50 mx-auto mb-2 flex h-48 w-screen flex-col items-center justify-between py-8`}
         >
           <div className="mx-auto flex w-[1280px] items-center justify-between">
             <Link href="/">
@@ -75,10 +70,6 @@ const Header = () => {
                 카테고리
               </Nav>
             </nav>
-
-            <div className="flex items-center justify-between">
-              <SearchBar />
-            </div>
           </div>
         </header>
       )}

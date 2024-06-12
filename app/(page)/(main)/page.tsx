@@ -1,13 +1,24 @@
-import Banner from '../../components/banner/Banner'
+// import Banner from '../../components/banner/Banner'
 import 'swiper/css'
 import ItemList from '../../components/product/ItemList'
 import CategoryList from '../../components/product/CategoryList'
 import FeaturedProducts from '../../components/product/FeaturedProducts'
+import SearchBar from '@/app/components/common/SearchBar'
 
 export default function Home() {
   return (
     <main className="mx-auto w-[1280px]">
-      <Banner />
+      {/* <Banner /> */}
+
+      <div className="mb-20 mt-10 flex flex-col items-center gap-8">
+        <h1 className="text-4xl font-extrabold">
+          변동하는 가격,{' '}
+          <span className="text-[var(--primary-color)]">최적가</span>로 똑똑하게
+          쇼핑하세요!
+        </h1>
+
+        <SearchBar />
+      </div>
 
       <CategoryList />
       <section className="flex h-auto flex-col gap-20">

@@ -34,13 +34,13 @@ const CompactCard = ({ item }: CompactCardProps) => {
                 {formatCurrency(item.originalPrice)}
               </span>
 
-              {item.previousPrice &&
+              {/* {item.previousPrice &&
                 item.previousPrice !== item.originalPrice &&
                 item.previousPrice > item.currentPrice && (
                   <span className="text-sm text-gray-500 line-through">
                     {formatCurrency(item.previousPrice)}
                   </span>
-                )}
+                )} */}
             </span>
 
             <span className="block w-full text-end text-xl font-bold text-black">

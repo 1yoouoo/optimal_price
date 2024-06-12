@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import ExtendedCard from './ExtendedCard'
 import { getAppleProducts } from '@/utils/mock'
@@ -22,13 +21,12 @@ const FeaturedProducts = () => {
           <h2 className="text-3xl font-bold">추천 상품</h2>
         </Link>
       </div>
-      <Image
+      <div
         className="absolute left-0 -z-10 max-h-[450px] min-h-[300px] w-screen -translate-y-36"
-        src="https://cdn.optimalprice.kr/overlay04.webp"
-        alt="text-overlay"
-        quality={100}
-        width={1920}
-        height={400}
+        style={{
+          background:
+            'linear-gradient(90deg, rgb(250,112,112) 31%, rgba(255,32,78,1) 73%)',
+        }}
       />
 
       <div className="relative">

@@ -1,6 +1,7 @@
 'use client'
 
 import CategoryComponent from '@/app/components/common/Category'
+import { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -88,8 +89,10 @@ export const categories = [
 ]
 
 const CategoryList = () => {
+  const [isReady, setIsReady] = useState(false)
+
   return (
-    <nav className="relative mx-auto my-40 w-[1280px]">
+    <nav className="relative mx-auto my-10 w-[1280px]">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
@@ -99,6 +102,9 @@ const CategoryList = () => {
           delay: 10000,
           disableOnInteraction: true,
         }}
+        onInit={() => {
+          setIsReady(true)
+        }}
       >
         {categories.map((category) => (
           <SwiperSlide
@@ -107,11 +113,15 @@ const CategoryList = () => {
               width: 'auto',
             }}
           >
-            <CategoryComponent
-              name={category.name}
-              path={category.filePath}
-              routes={category.routes}
-            />
+            {isReady ? (
+              <CategoryComponent
+                name={category.name}
+                path={category.filePath}
+                routes={category.routes}
+              />
+            ) : (
+              <div className="mb-7 mr-[30px] h-24 w-24 animate-pulse rounded-3xl bg-slate-200" />
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

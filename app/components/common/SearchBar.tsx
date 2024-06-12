@@ -2,22 +2,83 @@
 
 import SearchIcon from '@/public/svg/search.svg'
 import Image from 'next/image'
+import { useState, useEffect, useRef } from 'react'
 
 const SearchBar = () => {
+  const [query, setQuery] = useState('')
+  const [suggestions, setSuggestions] = useState<string[]>([])
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setQuery(value)
+    if (value) {
+      setSuggestions([
+        'Suggestion 1',
+        'Suggestion 2',
+        'Suggestion 3',
+        'Suggestion 4',
+        'Suggestion 5',
+        'Suggestion 6',
+        'Suggestion 7',
+        'Suggestion 8',
+        'Suggestion 9',
+        'Suggestion 10',
+      ])
+    } else {
+      setSuggestions([])
+    }
+  }
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setSuggestions([])
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
   return (
-    <div className="relative flex h-11 w-80 items-center rounded-full bg-[#f5f5f5] px-4 py-2">
+    <div
+      ref={dropdownRef}
+      className="relative flex h-16 w-[600px] items-center rounded-full border-2 border-[var(--primary-color)] px-4 py-2"
+    >
+      <span className="absolute left-2 flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full bg-[var(--primary-color)]">
+        <Image
+          className=""
+          src={SearchIcon}
+          alt="Search Icon"
+          width={20}
+          height={20}
+        />
+      </span>
       <input
         type="text"
-        placeholder="Search..."
-        className="placeholder:text-s decoration-none mx-3 border-none bg-transparent outline-none placeholder:text-gray-500"
+        placeholder="상품을 검색해 보세요"
+        value={query}
+        onChange={handleInputChange}
+        className="decoration-none mx-3 ml-14 inline-block h-full w-full border-none bg-transparent text-lg font-bold outline-none placeholder:text-lg placeholder:font-bold placeholder:text-[#D8D9CF]"
       />
-      <Image
-        className="absolute right-4"
-        src={SearchIcon}
-        alt="Search Icon"
-        width={20}
-        height={20}
-      />
+      {suggestions.length > 0 && (
+        <ul className="absolute left-0 top-[70px] z-50 max-h-[380px] min-h-[240px] w-full overflow-auto rounded-2xl border border-gray-300 bg-white shadow-lg">
+          {suggestions.map((suggestion, index) => (
+            <li
+              key={index}
+              className="cursor-pointer truncate px-6 py-2 hover:bg-gray-100"
+            >
+              {suggestion}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

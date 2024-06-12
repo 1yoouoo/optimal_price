@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: rgb(81, 197, 104);
+  --primary-color: #ff0000;
   --banner-height: 660px;
   --banner-width: 1280px;
 }
