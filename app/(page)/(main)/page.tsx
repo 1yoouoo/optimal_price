@@ -21,7 +21,6 @@ export default function Home() {
 
         <SearchBar />
       </div>
-
       <CategoryList />
 
       <section className="mt-20 flex h-auto flex-col gap-20">
