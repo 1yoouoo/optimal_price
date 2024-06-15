@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { useEffect, useState } from 'react'
 import SwiperNavigation from '../common/SwiperNavigation'
+import ItemListSwiperSkeleton from '../skeleton/ItemListSwiperSkeleton'
 
 interface ItemListSwiperProps {
   endpoint: string
@@ -18,20 +19,19 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
   const [isBeginning, setIsBeginning] = useState(true)
   const [isEnd, setIsEnd] = useState(false)
-  const [swiperReady, setSwiperReady] = useState(false)
+  const [isSwiperReady, setIsSwiperReady] = useState(false)
   const [fadeIn, setFadeIn] = useState(false)
-  const [swiperInstance, setSwiperInstance] = useState<any>(null)
   const items = getAppleProducts()
   const slicedItems = items.slice(0, 10)
 
   useEffect(() => {
-    if (swiperReady && swiperInstance) {
+    if (isSwiperReady) {
       setFadeIn(true)
     }
-  }, [swiperReady, swiperInstance])
+  }, [isSwiperReady])
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col">
       <div className="flex justify-between">
         <Link href={endpoint}>
           <h2 className="text-3xl font-bold">{title}</h2>
@@ -42,7 +42,7 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
       </div>
 
       <ul
-        className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
+        className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'} mt-10`}
       >
         <Swiper
           spaceBetween={10}
@@ -52,9 +52,8 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
             prevEl,
             nextEl,
           }}
-          onInit={(swiper) => {
-            setSwiperReady(true)
-            setSwiperInstance(swiper)
+          onInit={() => {
+            setIsSwiperReady(true)
           }}
           onSlideChange={(swiper) => {
             setIsBeginning(swiper.isBeginning)
@@ -62,11 +61,12 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
           }}
           className="relative h-full w-full"
         >
-          {slicedItems.map((item) => (
-            <SwiperSlide key={item.id}>
-              <CompactCard item={item} />
-            </SwiperSlide>
-          ))}
+          {isSwiperReady &&
+            slicedItems.map((item) => (
+              <SwiperSlide key={item.id}>
+                <CompactCard item={item} />
+              </SwiperSlide>
+            ))}
 
           <SwiperNavigation
             setPrevEl={setPrevEl}
@@ -77,6 +77,8 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
           />
         </Swiper>
       </ul>
+
+      {!isSwiperReady && <ItemListSwiperSkeleton />}
     </div>
   )
 }

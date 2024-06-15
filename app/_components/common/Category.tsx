@@ -19,14 +19,12 @@ const Category = ({ name, path, routes }: CategoryComponentProps) => {
       .catch((err) => console.error(`Error loading SVG: ${err}`))
   }, [path])
 
-  if (!CategoryIcon) return null
-
   return (
     <Link href={`${routes}`}>
       <li className="group inline-flex cursor-pointer flex-col items-center justify-center gap-y-2">
         <span className="flex h-24 w-24 items-center justify-center rounded-3xl bg-slate-200">
           <Image
-            src={CategoryIcon}
+            src={CategoryIcon ?? ''}
             alt={name}
             width={60}
             height={60}
