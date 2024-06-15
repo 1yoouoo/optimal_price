@@ -5,7 +5,7 @@ import Nav from './Nav'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import debounce from 'lodash/debounce'
-import { categories } from '../product/CategoryList'
+import { categories } from '@/app/(page)/(main)/page'
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false)

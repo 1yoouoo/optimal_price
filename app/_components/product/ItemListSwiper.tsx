@@ -6,8 +6,6 @@ import { getAppleProducts } from '@/utils/mock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { useState } from 'react'
-import NextButtonIconForBannner from '@/app/Icon/NextButtonIconForBanner'
-import PrevButtonIconForBannner from '@/app/Icon/PrevButtonIconForBannner'
 import SwiperNavigation from '../common/SwiperNavigation'
 
 interface ItemListSwiperProps {
@@ -18,8 +16,12 @@ interface ItemListSwiperProps {
 const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
+  const [isBeginning, setIsBeginning] = useState(true)
+  const [isEnd, setIsEnd] = useState(false)
   const items = getAppleProducts()
   const slicedItems = items.slice(0, 10)
+
+  console.log(isBeginning, isEnd)
 
   return (
     <div className="flex flex-col gap-10">
@@ -41,6 +43,10 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
             prevEl,
             nextEl,
           }}
+          onSlideChange={(swiper) => {
+            setIsBeginning(swiper.isBeginning)
+            setIsEnd(swiper.isEnd)
+          }}
           className="relative h-full w-full"
         >
           {slicedItems.map((item) => (
@@ -52,6 +58,8 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
           <SwiperNavigation
             setPrevEl={setPrevEl}
             setNextEl={setNextEl}
+            isBeginning={isBeginning}
+            isEnd={isEnd}
             position={{ top: -50 }}
           />
         </Swiper>

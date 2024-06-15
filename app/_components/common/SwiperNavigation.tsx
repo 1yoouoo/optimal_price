@@ -6,6 +6,8 @@ interface SwiperNavigationProps {
   setPrevEl: (prevEl: HTMLElement | null) => void
   // eslint-disable-next-line no-unused-vars
   setNextEl: (nextEl: HTMLElement | null) => void
+  isBeginning: boolean
+  isEnd: boolean
   position?: {
     top?: number
   }
@@ -14,6 +16,8 @@ interface SwiperNavigationProps {
 const SwiperNavigation = ({
   setPrevEl,
   setNextEl,
+  isBeginning,
+  isEnd,
   position,
 }: SwiperNavigationProps) => {
   return (
@@ -23,10 +27,10 @@ const SwiperNavigation = ({
         top: position?.top,
       }}
     >
-      <div>
+      <div style={{ opacity: isBeginning ? 0 : 1 }}>
         <PrevButtonIconForBannner setPrevEl={setPrevEl} />
       </div>
-      <div>
+      <div style={{ opacity: isEnd ? 0 : 1 }}>
         <NextButtonIconForBannner setNextEl={setNextEl} />
       </div>
     </div>
