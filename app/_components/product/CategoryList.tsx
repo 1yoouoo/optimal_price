@@ -1,7 +1,7 @@
 'use client'
 
-import { categories } from '@/app/(page)/(main)/page'
 import Category from '@/app/_components/common/Category'
+import { categories } from '@/utils/mock'
 import { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'

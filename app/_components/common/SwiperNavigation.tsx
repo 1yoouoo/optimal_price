@@ -6,8 +6,8 @@ interface SwiperNavigationProps {
   setPrevEl: (prevEl: HTMLElement | null) => void
   // eslint-disable-next-line no-unused-vars
   setNextEl: (nextEl: HTMLElement | null) => void
-  isBeginning: boolean
-  isEnd: boolean
+  isBeginning?: boolean
+  isEnd?: boolean
   position?: {
     top?: number
   }
