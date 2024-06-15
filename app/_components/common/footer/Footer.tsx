@@ -6,7 +6,7 @@ import GmailSVG from '@/public/svg/footer/gmail.svg'
 
 const Footer = () => {
   return (
-    <div className="relative mt-40 flex h-80 flex-col border-t border-gray-300 py-12">
+    <div className="relative mx-auto mt-40 flex h-80 min-w-[1280px] flex-col border-t border-gray-300 py-12">
       <div className="flex px-20">
         <div className="h-48 w-10/12 border-r border-gray-200">
           <p>
@@ -30,7 +30,7 @@ const Footer = () => {
             최적가는 상품, 거래정보 및 거래에 대해 책임을 지지 않습니다.
           </p>
         </div>
-        <div className="w-2/12 px-12">
+        <div className="min-w-[180px] pl-12">
           <div className="flex flex-col gap-1">
             <FooterSvgWrapper
               SvgComponent={
