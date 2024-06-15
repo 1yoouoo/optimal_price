@@ -21,7 +21,7 @@ const ProductWithImage = ({ item }: ProductWithImageProps) => {
       />
       <span className="absolute bottom-5 flex translate-y-full transform items-center justify-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
         <CopyIcon />
-        <NewTabIcon />
+        <NewTabIcon id={String(item.id)} />
       </span>
     </span>
   )

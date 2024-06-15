@@ -11,6 +11,12 @@
 body {
 }
 
+@layer base {
+  .font-tenada {
+    font-family: 'Tenada', serif;
+  }
+}
+
 @layer utilities {
 }
 

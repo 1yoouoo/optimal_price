@@ -194,7 +194,7 @@ export const getAppleProducts = () => {
       currentPrice: 1000,
       discountPercent: calculateDiscountPercent(8000, 1000),
       image: 'https://cdn.optimalprice.kr/08.jpeg',
-      stars: 4.5,
+      stars: 4.3,
       reviews: 100,
       isRocket: true,
     },
@@ -305,4 +305,9 @@ export const getAppleProducts = () => {
   ]
 
   return products
+}
+
+export const getProductById = (id: number): Product | undefined => {
+  const products = getAppleProducts()
+  return products.find((product) => product.id === id)
 }
