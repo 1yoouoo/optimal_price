@@ -13,7 +13,6 @@ interface ItemListProps {
 
 //TODO API 요청 시 limit있으면 효율적일 듯
 const ItemList = ({ title, endpoint, rows, items }: ItemListProps) => {
-  //TODO 무한 스크롤
   if (!rows)
     return (
       <div className="flex flex-col gap-10">

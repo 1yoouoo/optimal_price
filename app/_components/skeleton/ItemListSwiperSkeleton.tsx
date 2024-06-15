@@ -19,10 +19,13 @@ const ItemListSwiperSkeleton = () => {
               <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
             </svg>
           </div>
-          <div className="mb-4 h-2.5 w-32 rounded-full bg-slate-100"></div>
-          <div className="h-2 w-48 rounded-full bg-slate-100"></div>
-          <div className="relative mt-4 flex items-center">
-            <div className="absolute right-0 mt-4 h-3 w-24 rounded-full bg-slate-100"></div>
+
+          <div className="h-[128px] w-[204px]">
+            <div className="mb-4 h-2.5 w-32 rounded-full bg-slate-100"></div>
+            <div className="h-2 w-48 rounded-full bg-slate-100"></div>
+            <div className="relative mt-8 flex items-center">
+              <div className="absolute right-0 mt-4 h-3 w-24 rounded-full bg-slate-100"></div>
+            </div>
           </div>
           <span className="sr-only">Loading...</span>
         </div>

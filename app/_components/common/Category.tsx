@@ -23,13 +23,15 @@ const Category = ({ name, path, routes }: CategoryComponentProps) => {
     <Link href={`${routes}`}>
       <li className="group inline-flex cursor-pointer flex-col items-center justify-center gap-y-2">
         <span className="flex h-24 w-24 items-center justify-center rounded-3xl bg-slate-200">
-          <Image
-            src={CategoryIcon ?? ''}
-            alt={name}
-            width={60}
-            height={60}
-            className="transition-all duration-300 group-hover:scale-[1.05]"
-          />
+          {CategoryIcon && (
+            <Image
+              src={CategoryIcon}
+              alt={name}
+              width={60}
+              height={60}
+              className="transition-all duration-300 group-hover:scale-[1.05]"
+            />
+          )}
         </span>
 
         <span className="text-sm">{name}</span>
