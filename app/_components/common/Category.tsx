@@ -10,7 +10,7 @@ interface CategoryComponentProps {
   routes: string
 }
 
-const CategoryComponent = ({ name, path, routes }: CategoryComponentProps) => {
+const Category = ({ name, path, routes }: CategoryComponentProps) => {
   const [CategoryIcon, setCategoryIcon] = useState(null)
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const CategoryComponent = ({ name, path, routes }: CategoryComponentProps) => {
   )
 }
 
-export default CategoryComponent
+export default Category

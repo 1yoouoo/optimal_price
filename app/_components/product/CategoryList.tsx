@@ -1,6 +1,6 @@
 'use client'
 
-import CategoryComponent from '@/app/_components/common/Category'
+import Category from '@/app/_components/common/Category'
 import { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -114,7 +114,7 @@ const CategoryList = () => {
             }}
           >
             {isReady ? (
-              <CategoryComponent
+              <Category
                 name={category.name}
                 path={category.filePath}
                 routes={category.routes}

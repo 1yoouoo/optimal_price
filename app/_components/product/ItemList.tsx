@@ -14,8 +14,6 @@ interface ItemListProps {
 const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
   const Items = getAppleProducts()
 
-  console.log(endpoint)
-
   //TODO 무한 스크롤
   if (!rows)
     return (
