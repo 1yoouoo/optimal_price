@@ -4,26 +4,26 @@ import Logo from './Logo'
 import Nav from './Nav'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import debounce from 'lodash/debounce'
 import { categories } from '@/utils/mock'
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
 
-  const handleScroll = debounce(() => {
-    if (window.scrollY > 80) {
-      setIsSticky(true)
-    } else {
-      setIsSticky(false)
-    }
-  }, 10)
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [handleScroll])
+  }, [])
 
   return (
     <>
