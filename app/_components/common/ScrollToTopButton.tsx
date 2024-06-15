@@ -32,7 +32,7 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
     >
       <Image
-        src="/svg/button/btn_quick_up.svg"
+        src={QuickUpIcon}
         alt="Chevron Right Icon"
         width={60}
         height={60}

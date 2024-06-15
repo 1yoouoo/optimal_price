@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import FooterSvgWrapper from './FooterSvgWrapper'
+import GithubSVG from '@/public/svg/footer/github.svg'
+import TistorySVG from '@/public/svg/footer/tistory.svg'
+import GmailSVG from '@/public/svg/footer/gmail.svg'
 
 const Footer = () => {
   return (
@@ -31,31 +34,21 @@ const Footer = () => {
           <div className="flex flex-col gap-1">
             <FooterSvgWrapper
               SvgComponent={
-                <Image
-                  src="/svg/footer/gmail.svg"
-                  alt="gmail"
-                  width={30}
-                  height={30}
-                />
+                <Image src={GmailSVG} alt="gmail" width={30} height={30} />
               }
               href="mailto:optimalprice2024@gmail.com"
             />
             <span className="flex">
               <FooterSvgWrapper
                 SvgComponent={
-                  <Image
-                    src="/svg/footer/github.svg"
-                    alt="github"
-                    width={30}
-                    height={30}
-                  />
+                  <Image src={GithubSVG} alt="github" width={30} height={30} />
                 }
                 href="https://github.com/taegyun1995"
               />
               <FooterSvgWrapper
                 SvgComponent={
                   <Image
-                    src="/svg/footer/tistory.svg"
+                    src={TistorySVG}
                     alt="tistory"
                     width={30}
                     height={30}
@@ -67,19 +60,14 @@ const Footer = () => {
             <span className="flex">
               <FooterSvgWrapper
                 SvgComponent={
-                  <Image
-                    src="/svg/footer/github.svg"
-                    alt="github"
-                    width={30}
-                    height={30}
-                  />
+                  <Image src={GithubSVG} alt="github" width={30} height={30} />
                 }
                 href="https://github.com/1yoouoo"
               />
               <FooterSvgWrapper
                 SvgComponent={
                   <Image
-                    src="/svg/footer/tistory.svg"
+                    src={TistorySVG}
                     alt="tistory"
                     width={30}
                     height={30}
