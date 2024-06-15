@@ -1,9 +1,9 @@
-import ItemList from '../../_components/product/ItemList'
+import Prepared from '@/app/prepared'
 
 export default function Best() {
   return (
-    <main className="mx-auto mb-10 mt-20 w-[1280px]">
-      <ItemList title="베스트" endpoint="/best" />
+    <main>
+      <Prepared />
     </main>
   )
 }
