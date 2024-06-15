@@ -21,8 +21,6 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
   const items = getAppleProducts()
   const slicedItems = items.slice(0, 10)
 
-  console.log(isBeginning, isEnd)
-
   return (
     <div className="flex flex-col gap-10">
       <div className="flex justify-between">
