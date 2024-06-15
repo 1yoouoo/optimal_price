@@ -5,7 +5,7 @@ import CompactCard from './CompactCard'
 import { getAppleProducts } from '@/utils/mock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SwiperNavigation from '../common/SwiperNavigation'
 
 interface ItemListSwiperProps {
@@ -18,8 +18,17 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
   const [isBeginning, setIsBeginning] = useState(true)
   const [isEnd, setIsEnd] = useState(false)
+  const [swiperReady, setSwiperReady] = useState(false)
+  const [fadeIn, setFadeIn] = useState(false)
+  const [swiperInstance, setSwiperInstance] = useState<any>(null)
   const items = getAppleProducts()
   const slicedItems = items.slice(0, 10)
+
+  useEffect(() => {
+    if (swiperReady && swiperInstance) {
+      setFadeIn(true)
+    }
+  }, [swiperReady, swiperInstance])
 
   return (
     <div className="flex flex-col gap-10">
@@ -32,7 +41,9 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
         </Link>
       </div>
 
-      <div className="">
+      <ul
+        className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
+      >
         <Swiper
           spaceBetween={10}
           slidesPerView={5}
@@ -40,6 +51,10 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
           navigation={{
             prevEl,
             nextEl,
+          }}
+          onInit={(swiper) => {
+            setSwiperReady(true)
+            setSwiperInstance(swiper)
           }}
           onSlideChange={(swiper) => {
             setIsBeginning(swiper.isBeginning)
@@ -61,7 +76,7 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
             position={{ top: -50 }}
           />
         </Swiper>
-      </div>
+      </ul>
     </div>
   )
 }
