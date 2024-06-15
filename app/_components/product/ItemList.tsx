@@ -1,19 +1,18 @@
 'use client'
 
-import { getAppleProducts } from '@/utils/mock'
+import { Product } from '@/utils/mock'
 import CompactCard from './CompactCard'
 import Link from 'next/link'
 
 interface ItemListProps {
+  items: Product[]
   title: string
   endpoint: string
   rows?: number
 }
 
 //TODO API 요청 시 limit있으면 효율적일 듯
-const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
-  const items = getAppleProducts()
-
+const ItemList = ({ title, endpoint, rows, items }: ItemListProps) => {
   //TODO 무한 스크롤
   if (!rows)
     return (
@@ -22,11 +21,7 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
           <Link href={endpoint}>
             <h2 className="cursor-pointer text-3xl font-bold">{title}</h2>
           </Link>
-          <Link href={endpoint}>
-            <span className="flex h-10 cursor-pointer items-center justify-center">
-              더 보기
-            </span>
-          </Link>
+          <Link href={endpoint}></Link>
         </div>
         <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
           {items.map((item) => (

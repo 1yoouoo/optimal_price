@@ -1,14 +1,14 @@
 import ItemList from '@/app/_components/product/ItemList'
 import { getAppleProducts } from '@/utils/mock'
 
-const Furniture = () => {
+const OrganicFood = () => {
   const items = getAppleProducts()
 
   return (
     <section className="mx-auto mb-10 mt-10 w-[1280px]">
-      <ItemList title="가전/디지털" endpoint="/furniture" items={items} />
+      <ItemList title="식품" endpoint="/category/organic-food" items={items} />
     </section>
   )
 }
 
-export default Furniture
+export default OrganicFood

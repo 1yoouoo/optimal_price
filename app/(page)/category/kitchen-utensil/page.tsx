@@ -1,14 +1,18 @@
 import ItemList from '@/app/_components/product/ItemList'
 import { getAppleProducts } from '@/utils/mock'
 
-const Furniture = () => {
+const KitchenUtensil = () => {
   const items = getAppleProducts()
 
   return (
     <section className="mx-auto mb-10 mt-10 w-[1280px]">
-      <ItemList title="가전/디지털" endpoint="/furniture" items={items} />
+      <ItemList
+        title="주방용품"
+        endpoint="/category/kitchen-utensil"
+        items={items}
+      />
     </section>
   )
 }
 
-export default Furniture
+export default KitchenUtensil

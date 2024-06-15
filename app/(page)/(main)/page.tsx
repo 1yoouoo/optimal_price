@@ -32,9 +32,7 @@ export default function Home() {
           />
         ))}
 
-        {/* <ItemList title="베스트" endpoint="/best" rows={2} /> */}
         {/* <FeaturedProducts /> */}
-        {/* <ItemList title="할인율이 높은 상품" endpoint="/discount" rows={2} /> */}
       </section>
     </main>
   )
