@@ -19,9 +19,7 @@ const NextButtonIconForBannner = ({
   }, [setNextEl])
 
   return (
-    <span
-      className={`absolute bottom-0 left-[var(--banner-width)] right-0 top-0 flex items-center justify-center`}
-    >
+    <span className={`relative z-40`}>
       <Image
         ref={nextRef}
         src={ChevronRightSVG}

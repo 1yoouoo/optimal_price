@@ -1,9 +1,10 @@
-// import Banner from '../../components/banner/Banner'
 import 'swiper/css'
 import ItemList from '../../_components/product/ItemList'
 import CategoryList from '../../_components/product/CategoryList'
 import FeaturedProducts from '../../_components/product/FeaturedProducts'
 import SearchBar from '@/app/_components/common/SearchBar'
+import ItemListSwiper from '@/app/_components/product/ItemListSwiper'
+// import Banner from '@/app/_components/banner/Banner'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       <CategoryList />
       <section className="flex h-auto flex-col gap-20">
+        <ItemListSwiper title="베스트" endpoint="/best" />
         <ItemList title="베스트" endpoint="/best" rows={2} />
         <FeaturedProducts />
         <ItemList title="할인율이 높은 상품" endpoint="/discount" rows={2} />

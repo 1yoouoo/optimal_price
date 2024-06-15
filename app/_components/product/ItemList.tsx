@@ -12,7 +12,7 @@ interface ItemListProps {
 
 //TODO API 요청 시 limit있으면 효율적일 듯
 const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
-  const Items = getAppleProducts()
+  const items = getAppleProducts()
 
   //TODO 무한 스크롤
   if (!rows)
@@ -29,14 +29,14 @@ const ItemList = ({ title, endpoint, rows }: ItemListProps) => {
           </Link>
         </div>
         <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
-          {Items.map((item) => (
+          {items.map((item) => (
             <CompactCard key={item.id} item={item} />
           ))}
         </div>
       </div>
     )
 
-  const slicedItems = Items.slice(0, rows * 5)
+  const slicedItems = items.slice(0, rows * 5)
 
   return (
     <div className="flex flex-col gap-10">

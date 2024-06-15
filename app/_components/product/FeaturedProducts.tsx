@@ -5,12 +5,11 @@ import ExtendedCard from './ExtendedCard'
 import { getAppleProducts } from '@/utils/mock'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useState } from 'react'
-import NextButtonIconForFeaturedProducts from '../../Icon/NextButtonIconForFeaturedProducts'
-import PrevButtonIconForFeaturedProducts from '../../Icon/PrevButtonIconForFeaturedProducts'
 import { Navigation } from 'swiper/modules'
+import SwiperNavigation from '../common/SwiperNavigation'
 
 const FeaturedProducts = () => {
-  const Items = getAppleProducts()
+  const items = getAppleProducts()
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
 
@@ -42,16 +41,15 @@ const FeaturedProducts = () => {
               nextEl,
             }}
           >
-            {Items.map((item) => (
+            {items.map((item) => (
               <SwiperSlide key={item.id} style={{ width: 'auto' }}>
                 <ExtendedCard item={item} />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="">
-          <NextButtonIconForFeaturedProducts setNextEl={setNextEl} />
-          <PrevButtonIconForFeaturedProducts setPrevEl={setPrevEl} />
+        <div className="absolute left-0 top-0 m-auto h-28 w-36">
+          <SwiperNavigation setPrevEl={setPrevEl} setNextEl={setNextEl} />
         </div>
       </div>
     </div>
