@@ -5,6 +5,7 @@ import { categories } from '@/utils/mock'
 import { useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import CategoryListSkeleton from '../skeleton/CategoryListSkeleton'
 
 const CategoryList = () => {
   const [isReady, setIsReady] = useState(false)
@@ -38,7 +39,7 @@ const CategoryList = () => {
                 routes={category.routes}
               />
             ) : (
-              <div className="mb-7 mr-[30px] h-24 w-24 animate-pulse rounded-3xl bg-slate-200" />
+              <CategoryListSkeleton />
             )}
           </SwiperSlide>
         ))}

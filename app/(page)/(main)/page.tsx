@@ -23,6 +23,7 @@ export default function Home() {
       </div>
 
       <CategoryList />
+
       <section className="mt-20 flex h-auto flex-col gap-20">
         {categories.map((category) => (
           <ItemListSwiper
