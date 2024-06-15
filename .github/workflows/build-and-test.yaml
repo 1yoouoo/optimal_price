@@ -47,8 +47,10 @@ jobs:
       - name: Test
         run: npm test
 
+      # - name: Archive production artifacts
+      #   run: tar -czf nextjs-build.tar.gz .next package.json package-lock.json next.config.mjs
       - name: Archive production artifacts
-        run: tar -czf nextjs-build.tar.gz .next package.json package-lock.json next.config.mjs
+        run: tar -czf nextjs-build.tar.gz .next public package.json package-lock.json next.config.mjs
 
       - name: Deploy to DigitalOcean Droplet
         env:
