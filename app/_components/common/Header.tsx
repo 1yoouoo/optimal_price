@@ -39,7 +39,7 @@ const Header = () => {
                 <Nav
                   href="/category"
                   dropdown={categories.map((category) => ({
-                    href: category.filePath,
+                    href: category.routes,
                     label: category.name,
                   }))}
                 >
@@ -67,7 +67,7 @@ const Header = () => {
               <Nav
                 href="/category"
                 dropdown={categories.map((category) => ({
-                  href: category.filePath,
+                  href: category.routes,
                   label: category.name,
                 }))}
               >
