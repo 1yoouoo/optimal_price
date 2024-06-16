@@ -11,6 +11,9 @@ const inter = DM_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: '최적가 | 똑똑한 소비습관',
   description: '',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
