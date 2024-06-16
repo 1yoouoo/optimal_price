@@ -5,7 +5,7 @@ const Furniture = () => {
   const items = getAppleProducts()
 
   return (
-    <section className="mx-auto mb-10 mt-10 w-[1280px]">
+    <section className="mx-auto mb-10 w-[1280px]">
       <ItemList title="가전/디지털" endpoint="/furniture" items={items} />
     </section>
   )

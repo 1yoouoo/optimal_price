@@ -5,7 +5,7 @@ const FreshFood = () => {
   const items = getAppleProducts()
 
   return (
-    <section className="mx-auto mb-10 mt-10 w-[1280px]">
+    <section className="mx-auto mb-10 w-[1280px]">
       <ItemList
         title="신선식품"
         endpoint="/category/fresh-food"

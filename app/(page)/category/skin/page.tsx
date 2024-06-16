@@ -5,7 +5,7 @@ const Skin = () => {
   const items = getAppleProducts()
 
   return (
-    <section className="mx-auto mb-10 mt-10 w-[1280px]">
+    <section className="mx-auto mb-10 w-[1280px]">
       <ItemList title="뷰티" endpoint="/category/skin" items={items} />
     </section>
   )

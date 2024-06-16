@@ -5,7 +5,7 @@ const Sports = () => {
   const items = getAppleProducts()
 
   return (
-    <section className="mx-auto mb-10 mt-10 w-[1280px]">
+    <section className="mx-auto mb-10 w-[1280px]">
       <ItemList title="스포츠/레저" endpoint="/category/sports" items={items} />
     </section>
   )
