@@ -4,6 +4,7 @@
 
 :root {
   --primary-color: #40a578;
+  --primary-color-hover: #2f835d;
   --banner-height: 660px;
   --banner-width: 1280px;
 }

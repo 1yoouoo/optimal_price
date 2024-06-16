@@ -112,7 +112,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(4000, 3800),
       image: 'https://cdn.optimalprice.kr/01.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -124,7 +124,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(2000, 1000),
       image: 'https://cdn.optimalprice.kr/02.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -135,7 +135,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(3000, 1000),
       image: 'https://cdn.optimalprice.kr/03.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: false,
     },
     {
@@ -147,7 +147,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(4000, 1000),
       image: 'https://cdn.optimalprice.kr/04.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: false,
     },
     {
@@ -159,7 +159,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(5000, 1000),
       image: 'https://cdn.optimalprice.kr/05.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -171,7 +171,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(4900000, 1000),
       image: 'https://cdn.optimalprice.kr/06.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -183,7 +183,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(7000, 1000),
       image: 'https://cdn.optimalprice.kr/07.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: false,
     },
     {
@@ -195,7 +195,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(8000, 1000),
       image: 'https://cdn.optimalprice.kr/08.jpeg',
       stars: 4.3,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -207,7 +207,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(9000, 5000),
       image: 'https://cdn.optimalprice.kr/09.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -219,7 +219,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(10000, 1000),
       image: 'https://cdn.optimalprice.kr/10.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -230,7 +230,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(11000, 1000),
       image: 'https://cdn.optimalprice.kr/11.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -242,7 +242,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(12000, 1000),
       image: 'https://cdn.optimalprice.kr/12.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -254,7 +254,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(13000, 1000),
       image: 'https://cdn.optimalprice.kr/13.png',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -265,7 +265,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(14000, 1000),
       image: 'https://cdn.optimalprice.kr/14.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -276,7 +276,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(15000, 11000),
       image: 'https://cdn.optimalprice.kr/15.png',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -288,7 +288,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(16000, 12500),
       image: 'https://cdn.optimalprice.kr/16.jpeg',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
     {
@@ -299,7 +299,7 @@ export const getAppleProducts = () => {
       discountPercent: calculateDiscountPercent(17000, 13500),
       image: 'https://cdn.optimalprice.kr/17.png',
       stars: 4.5,
-      reviews: 100,
+      reviews: 1102,
       isRocket: true,
     },
   ]

@@ -7,10 +7,10 @@ interface RenderStarsProps {
 const RenderStars = ({ stars }: RenderStarsProps) => {
   return (
     <div
-      className={`${tenada.variable} font-tenada relative m-0 inline-block h-6 w-auto cursor-default p-0 text-2xl text-[#cccccc]`}
+      className={`${tenada.variable} line-height relative m-0 inline-block h-6 w-auto cursor-default p-0 font-tenada text-2xl text-[#cccccc]`}
     >
       <div
-        className="absolute left-0 top-0 z-10 flex overflow-hidden text-[#ff9600]"
+        className="absolute left-0 top-0 z-10 flex items-center overflow-hidden text-[#f5b000]"
         style={{ width: `${stars * 20}%` }}
       >
         <span>★</span>
@@ -19,7 +19,7 @@ const RenderStars = ({ stars }: RenderStarsProps) => {
         <span>★</span>
         <span>★</span>
       </div>
-      <div className="z-0 flex">
+      <div className="z-0 flex items-center">
         <span>★</span>
         <span>★</span>
         <span>★</span>
