@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import Header from './_components/common/Header'
+import Header from './_components/common/header/Header'
 import Footer from './_components/common/footer/Footer'
 import ScrollToTopButton from './_components/common/ScrollToTopButton'
 import { ToastProvider } from './provider/ToastProvider'

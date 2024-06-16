@@ -1,8 +1,12 @@
+import Image from 'next/image'
+import LogoImage from '@/public/images/logo/logo.webp'
+import Link from 'next/link'
+
 const Logo = () => {
   return (
-    <div className="flex h-16 w-52 items-center bg-[var(--primary-color)] text-2xl">
-      최적가 로고
-    </div>
+    <Link href="/" className="flex h-16 items-center gap-3 bg-white">
+      <Image src={LogoImage} alt="logo" width={52} height={16} />
+    </Link>
   )
 }
 
