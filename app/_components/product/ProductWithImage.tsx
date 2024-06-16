@@ -1,6 +1,6 @@
 import ImageWithFallback from '@/app/_components/common/ImageWithFallback'
-import NewTabIcon from '../../Icon/NewTabIcon'
-import CopyIcon from '../../Icon/CopyIcon'
+// import NewTabIcon from '../../Icon/NewTabIcon'
+// import CopyIcon from '../../Icon/CopyIcon'
 import { Product } from '@/utils/mock'
 import { fallbackSrc } from '@/utils/contants'
 
@@ -19,10 +19,10 @@ const ProductWithImage = ({ item }: ProductWithImageProps) => {
         className="px-4"
         fallbackSrc={fallbackSrc}
       />
-      <span className="absolute bottom-5 flex translate-y-full transform items-center justify-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+      {/* <span className="absolute bottom-5 flex translate-y-full transform items-center justify-center gap-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
         <CopyIcon />
         <NewTabIcon id={String(item.id)} />
-      </span>
+      </span> */}
     </span>
   )
 }
