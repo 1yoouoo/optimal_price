@@ -6,7 +6,7 @@ import GmailSVG from '@/public/svg/footer/gmail.svg'
 
 const Footer = () => {
   return (
-    <div className="relative mx-auto mt-40 flex h-80 min-w-[1280px] flex-col border-t border-gray-300 py-12">
+    <div className="relative mx-auto mt-40 flex h-80 w-[1280px] flex-col border-t border-gray-300 py-12">
       <div className="flex px-20">
         <div className="h-48 w-10/12 border-r border-gray-200">
           <p>
