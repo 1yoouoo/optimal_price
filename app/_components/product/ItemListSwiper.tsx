@@ -45,7 +45,7 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
         className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'} mt-10`}
       >
         <Swiper
-          spaceBetween={10}
+          spaceBetween={40}
           slidesPerView={5}
           modules={[Navigation]}
           navigation={{

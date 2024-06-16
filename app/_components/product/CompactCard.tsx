@@ -21,12 +21,12 @@ const CompactCard = ({ item }: CompactCardProps) => {
 
   return (
     <Link href={`/product/${item.id}`}>
-      <span className="group relative flex items-center justify-center">
-        <span className="relative flex flex-col gap-4 transition-opacity duration-200">
+      <span className="group relative flex w-full items-center justify-center">
+        <span className="relative flex flex-col gap-6 transition-opacity duration-200">
           <ProductWithImage item={item} />
-          <span className="mx-2 flex min-h-32 cursor-pointer flex-col items-start justify-between gap-1">
-            <span className="flex w-full flex-col items-start justify-between gap-1">
-              <b className="line-clamp-2 w-full">{item.name}</b>
+          <span className="mx-1 flex min-h-32 cursor-pointer flex-col items-start justify-between">
+            <span className="flex flex-col items-start justify-between gap-1">
+              <b className="line-clamp-2">{item.name}</b>
 
               <span className="flex items-center gap-2">
                 <span className="text-lg font-semibold text-red-500">

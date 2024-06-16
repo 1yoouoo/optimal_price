@@ -22,7 +22,7 @@ const ItemList = ({ title, endpoint, rows, items }: ItemListProps) => {
           </Link>
           <Link href={endpoint}></Link>
         </div>
-        <div className={`grid grid-cols-5 gap-x-4 gap-y-12`}>
+        <div className={`grid grid-cols-5 gap-x-8 gap-y-12`}>
           {items.map((item) => (
             <CompactCard key={item.id} item={item} />
           ))}
