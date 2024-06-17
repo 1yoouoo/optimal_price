@@ -18,7 +18,7 @@ const CategoryList = () => {
   }, [isSwiperReady])
 
   return (
-    <nav className="relative mx-auto my-10 w-[1280px]">
+    <nav className="relative mx-auto my-10 max-w-[1280px] px-4">
       <ul
         className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}
       >

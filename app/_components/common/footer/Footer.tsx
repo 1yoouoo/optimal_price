@@ -6,9 +6,9 @@ import GmailSVG from '@/public/svg/footer/gmail.svg'
 
 const Footer = () => {
   return (
-    <div className="relative mx-auto mt-40 flex h-80 w-[1280px] flex-col border-t border-gray-300 py-12">
-      <div className="flex px-20">
-        <div className="h-48 w-10/12 border-r border-gray-200">
+    <div className="relative mx-auto mt-40 flex h-80 w-screen flex-col items-center justify-between border-t border-gray-300 pb-2 pt-12">
+      <div className="flex w-full justify-between px-20">
+        <div className="h-48 break-words">
           <p>
             이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일액의 수수료
             제공받습니다.
@@ -30,7 +30,7 @@ const Footer = () => {
             최적가는 상품, 거래정보 및 거래에 대해 책임을 지지 않습니다.
           </p>
         </div>
-        <div className="min-w-[180px] pl-12">
+        <div className="border-l border-gray-200 pl-12">
           <div className="flex flex-col gap-1">
             <FooterSvgWrapper
               SvgComponent={
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="absolute bottom-0 mb-4 mt-4 w-full text-center text-gray-500">
+      <p className="h-6 w-full text-center text-gray-500">
         &copy; {new Date().getFullYear()}{' '}
         <a
           href="https://optimalprice.kr"

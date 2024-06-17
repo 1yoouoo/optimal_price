@@ -31,13 +31,15 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
   }, [isSwiperReady])
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-4">
       <div className="flex justify-between">
         <Link href={endpoint}>
           <h2 className="text-2xl font-bold">{title}</h2>
         </Link>
         <Link href={endpoint}>
-          <span className="flex h-10 items-center justify-center">더 보기</span>
+          <span className="flex h-10 items-center justify-center text-gray-500 transition-colors duration-200 hover:text-black">
+            더 보기
+          </span>
         </Link>
       </div>
 

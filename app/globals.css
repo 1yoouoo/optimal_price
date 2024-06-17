@@ -9,9 +9,6 @@
   --banner-width: 1280px;
 }
 
-body {
-}
-
 @layer base {
   .font-tenada {
     font-family: 'Tenada', serif;

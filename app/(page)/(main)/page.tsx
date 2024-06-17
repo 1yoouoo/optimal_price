@@ -9,7 +9,7 @@ import { categories } from '@/utils/mock'
 
 export default function Home() {
   return (
-    <main className="mx-auto w-[1280px]">
+    <main className="mx-auto max-w-[1280px]">
       {/* <Banner /> */}
 
       <div className="mb-20 flex flex-col items-center gap-6">
