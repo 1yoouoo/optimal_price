@@ -34,7 +34,7 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
     <div className="flex flex-col">
       <div className="flex justify-between">
         <Link href={endpoint}>
-          <h2 className="text-3xl font-bold">{title}</h2>
+          <h2 className="text-2xl font-bold">{title}</h2>
         </Link>
         <Link href={endpoint}>
           <span className="flex h-10 items-center justify-center">더 보기</span>
@@ -45,8 +45,8 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
         className={`transition-opacity duration-500 ${fadeIn ? 'opacity-100' : 'opacity-0'} mt-10`}
       >
         <Swiper
-          spaceBetween={40}
-          slidesPerView={5}
+          spaceBetween={24}
+          slidesPerView="auto"
           modules={[Navigation]}
           navigation={{
             prevEl,
@@ -63,7 +63,12 @@ const ItemListSwiper = ({ endpoint, title }: ItemListSwiperProps) => {
         >
           {isSwiperReady &&
             slicedItems.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide
+                key={item.id}
+                style={{
+                  width: 'auto',
+                }}
+              >
                 <CompactCard item={item} />
               </SwiperSlide>
             ))}

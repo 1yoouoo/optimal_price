@@ -70,15 +70,15 @@ const SearchBar = () => {
   return (
     <div
       ref={dropdownRef}
-      className="relative flex h-16 w-[600px] items-center rounded-full border-2 border-[var(--primary-color)] px-4 py-2"
+      className="relative flex h-14 w-[550px] items-center rounded-full border-2 border-[var(--primary-color)] px-4 py-2"
     >
-      <span className="absolute left-2 flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full bg-[var(--primary-color)]">
+      <span className="absolute left-2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-[var(--primary-color)]">
         <Image
           className=""
           src={SearchIcon}
           alt="Search Icon"
-          width={20}
-          height={20}
+          width={18}
+          height={18}
         />
       </span>
       <input
@@ -88,7 +88,7 @@ const SearchBar = () => {
         value={query}
         onChange={handleInputChange}
         onFocus={handleInputFocus}
-        className="decoration-none mx-3 ml-14 inline-block h-full w-full border-none bg-transparent text-lg font-bold outline-none placeholder:text-lg placeholder:font-bold placeholder:text-[#D8D9CF]"
+        className="decoration-none mx-3 ml-12 inline-block h-full w-full border-none bg-transparent text-lg font-bold outline-none placeholder:text-lg placeholder:font-bold placeholder:text-[#D8D9CF]"
       />
       {suggestions.length > 0 && (
         <ul className="absolute left-0 top-[70px] z-50 max-h-[380px] min-h-[240px] w-full overflow-auto rounded-2xl border border-gray-300 bg-white shadow-lg">

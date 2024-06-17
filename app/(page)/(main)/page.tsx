@@ -12,8 +12,8 @@ export default function Home() {
     <main className="mx-auto w-[1280px]">
       {/* <Banner /> */}
 
-      <div className="mb-20 flex flex-col items-center gap-8">
-        <h1 className="text-4xl font-extrabold">
+      <div className="mb-20 flex flex-col items-center gap-6">
+        <h1 className="text-3xl font-extrabold">
           변동하는 가격,{' '}
           <span className="text-[var(--primary-color)]">최적가</span>로 똑똑하게
           쇼핑하세요!
