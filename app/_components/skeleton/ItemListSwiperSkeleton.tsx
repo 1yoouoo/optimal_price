@@ -1,13 +1,13 @@
 const ItemListSwiperSkeleton = () => {
   return (
-    <div className="flex h-[316px] w-[1280px] flex-row gap-1 overflow-hidden">
+    <div className="flex h-[344px] flex-row gap-4 overflow-hidden">
       {Array.from({ length: 12 }).map((_, index) => (
         <div
           role="status"
-          className="h-[292px] w-[248px] max-w-sm animate-pulse rounded px-6"
+          className="max-w-sm animate-pulse rounded pr-2"
           key={index}
         >
-          <div className="mb-4 flex h-[188px] w-[220px] items-center justify-center rounded bg-slate-100">
+          <div className="mb-6 flex h-[191.992px] w-[191.992px] items-center justify-center rounded bg-slate-100">
             <svg
               className="h-10 w-10 text-slate-300"
               aria-hidden="true"
@@ -20,8 +20,9 @@ const ItemListSwiperSkeleton = () => {
             </svg>
           </div>
 
-          <div className="h-[128px] w-[204px]">
-            <div className="mb-4 h-2.5 w-32 rounded-full bg-slate-100"></div>
+          <div className="">
+            <div className="mb-2 h-2.5 w-32 rounded-full bg-slate-100"></div>
+            <div className="mb-2 h-2.5 w-32 rounded-full bg-slate-100"></div>
             <div className="h-2 w-48 rounded-full bg-slate-100"></div>
             <div className="relative mt-8 flex items-center">
               <div className="absolute right-0 mt-4 h-3 w-24 rounded-full bg-slate-100"></div>
